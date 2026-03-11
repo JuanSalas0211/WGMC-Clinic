@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WGMC — Center for Advancement of Human Potential and Belonging (CAHPB)</title>
+    <meta name="theme-color" content="#319FCA" />
+    <meta name="description" content="A multi-disciplinary team advancing data, program development, and communications to improve healthcare, housing, and human services in the community." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      tailwind = window.tailwind || {};
+      tailwind.config = { theme: { extend: { colors: { brand: { primary: 'var(--brand-primary)', secondary: 'var(--brand-secondary)', black: 'var(--brand-black)', white: 'var(--brand-white)' }, text: 'var(--text-color)', muted: 'var(--muted-bg)' }, borderRadius: { brand: 'var(--radius)' }, boxShadow: { card: 'var(--shadow)' } } } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hero { background-image: radial-gradient(circle at 10% 20%, rgba(var(--brand-primary-rgb), 0.12), transparent 35%), radial-gradient(circle at 80% 10%, rgba(var(--brand-secondary-rgb), 0.12), transparent 30%), linear-gradient(135deg, #ffffffee, rgba(var(--brand-secondary-rgb), 0.25)); }
+    </style>
+  </head>
+  <body class="bg-white text-text font-sans">
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200" data-site-nav>
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between" aria-label="Main">
+        <a data-lang-href="index.html#home" class="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary rounded-md">
+          <img src="images/WGMC-Logo-Alternate-1-website.jpg" alt="WGMC logo" class="h-8 w-auto" />
+          <span class="font-semibold text-brand-primary hidden sm:inline">WGMC</span>
+        </a>
+        <button class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md border border-slate-300 text-slate-700" aria-label="Open menu" aria-expanded="false" data-mobile-toggle>☰</button>
+        <div class="hidden md:flex items-center gap-6 text-sm font-semibold">
+          <a data-lang-href="patients.html" class="hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary rounded-md" data-i18n="navGetCare">Get Care</a>
+          <div class="relative" data-dropdown>
+            <button class="inline-flex items-center gap-1 px-2 py-2 rounded-md hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary dropdown-toggle" aria-haspopup="menu" aria-expanded="false">
+              <span data-i18n="navPrograms">Programs</span> <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-80 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a data-lang-href="program-health-care-services.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Healthcare Services</a>
+              <a data-lang-href="program-housing-outreach-case-management.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Housing, Healthcare, and Hope (HHH)</a>
+              <a data-lang-href="program-community-research-data.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Center for Advancement of Human Potential and Belonging (CAHPB)</a>
+            </div>
+          </div>
+          <div class="relative" data-dropdown>
+            <button class="inline-flex items-center gap-1 px-2 py-2 rounded-md hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary dropdown-toggle" aria-haspopup="menu" aria-expanded="false">
+              About Us <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-72 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a data-lang-href="our-mission.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Mission</a>
+              <a data-lang-href="our-impact.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Impact</a>
+              <a data-lang-href="our-leaders.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Leaders</a>
+              <a data-lang-href="our-partners.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Partners</a>
+              <a data-lang-href="our-board-of-directors.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Board of Directors</a>
+            </div>
+          </div>
+          <div class="relative" data-dropdown>
+            <button class="inline-flex items-center gap-1 px-2 py-2 rounded-md hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary dropdown-toggle" aria-haspopup="menu" aria-expanded="false">
+              Get Involved <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-64 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a data-lang-href="become-a-volunteer.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Become a Volunteer</a>
+              <a data-lang-href="partner-referrals.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Partner Referrals</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:inline-block" data-dropdown>
+            <button class="btn btn-secondary inline-flex items-center gap-2 dropdown-toggle" aria-haspopup="menu" aria-expanded="false" data-i18n="navDonate">
+              Donate <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-56 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
+              <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW" target="_blank" rel="noreferrer">Sponsor a Patient</a>
+              <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://willgrundymedicalclinic.org/brick-by-brick/" target="_blank" rel="noreferrer">Brick by Brick</a>
+            </div>
+          </div>
+          <div class="lang-select-wrapper">
+            <select id="langSelect" class="lang-select" aria-label="Change language">
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="pl">Polski</option>
+              <option value="ar">العربية</option>
+            </select>
+            <span class="lang-select-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path fill="currentColor" d="M7 10l5 5 5-5H7z" />
+              </svg>
+            </span>
+          </div>
+          <a href="tel:+18157263377" class="hidden sm:inline-flex btn btn-primary" data-i18n="ctaCall"><span>📞</span> Call (815) 726-3377</a>
+        </div>
+      </nav>
+      <div class="md:hidden border-t border-slate-200 bg-white hidden" data-mobile-menu>
+        <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm font-semibold">
+          <a data-lang-href="patients.html" class="py-2" data-i18n="navGetCare">Get Care</a>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="programs" aria-expanded="false">
+            <span data-i18n="navPrograms">Programs</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="programs">
+            <a data-lang-href="program-health-care-services.html" class="py-1">Healthcare Services</a>
+            <a data-lang-href="program-housing-outreach-case-management.html" class="py-1">Housing, Healthcare, and Hope (HHH)</a>
+            <a data-lang-href="program-community-research-data.html" class="py-1">Center for Advancement of Human Potential and Belonging (CAHPB)</a>
+          </div>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="about" aria-expanded="false">
+            <span>About Us</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="about">
+            <a data-lang-href="our-mission.html" class="py-1">Our Mission</a>
+            <a data-lang-href="our-impact.html" class="py-1">Our Impact</a>
+            <a data-lang-href="our-leaders.html" class="py-1">Our Leaders</a>
+            <a data-lang-href="our-partners.html" class="py-1">Our Partners</a>
+            <a data-lang-href="our-board-of-directors.html" class="py-1">Our Board of Directors</a>
+          </div>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="involved" aria-expanded="false">
+            <span>Get Involved</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="involved">
+            <a data-lang-href="become-a-volunteer.html" class="py-1">Become a Volunteer</a>
+            <a data-lang-href="partner-referrals.html" class="py-1">Partner Referrals</a>
+          </div>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="donate" aria-expanded="false">
+            <span data-i18n="navDonate">Donate</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="donate">
+            <a class="py-1" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
+            <a class="py-1" href="https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW" target="_blank" rel="noreferrer">Sponsor a Patient</a>
+            <a class="py-1" href="https://willgrundymedicalclinic.org/brick-by-brick/" target="_blank" rel="noreferrer">Brick by Brick</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+          <div class="space-y-4">
+            <h1 class="text-3xl sm:text-4xl font-bold text-brand-primary heading-accent" data-i18n="heroTitle">Center for Advancement of Human Potential and Belonging (CAHPB)</h1>
+            <p class="text-lg text-slate-700 max-w-3xl" data-i18n="heroDesc">A multi-disciplinary team advancing data, program development, and communications to improve healthcare, housing, and human services in the community.</p>
+            <div class="mt-2 flex flex-wrap gap-3">
+              <a href="tel:+18157263377" class="btn btn-primary" data-i18n="callHelp">Call WGMC</a>
+              <a href="mailto:swest@wgmedclinic.org" class="btn btn-outline" data-i18n="emailTeam">Email CAHPB</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-3 gap-6">
+          <div class="md:col-span-2 bg-white rounded-brand shadow-card p-6 border border-slate-100">
+            <h2 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="cahpbOverviewTitle">Overview</h2>
+            <p class="mt-3 text-slate-700" data-i18n="overview1">The Center for Advancement of Human Potential and Belonging (CAHPB) is a multi-disciplinary team focused on data quality and insights, program development and collaboration opportunities, conducting research, and communicating key findings to the community, partners, and other interest holders to advance access to healthcare, housing, and human needs.</p>
+            <p class="mt-3 text-slate-700" data-i18n="overview2">Current work includes building actionable insights from community data, strengthening collaboration between programs, and sharing findings that improve access, equity, and belonging for residents.</p>
+          </div>
+          <aside class="bg-muted rounded-brand p-6">
+            <h3 class="font-semibold" data-i18n="getInvolvedTitle">Get Involved</h3>
+            <ul class="mt-3 space-y-2 text-sm text-slate-700">
+              <li data-i18n="intern1">Program &amp; Policy internships</li>
+              <li data-i18n="intern2">Research and Analysis internships</li>
+              <li data-i18n="intern3">Communications internships</li>
+            </ul>
+            <a href="mailto:swest@wgmedclinic.org" class="mt-4 inline-flex btn btn-light" data-i18n="emailTeam">Email CAHPB</a>
+          </aside>
+        </div>
+      </section>
+
+      <section>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+          <h2 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="cahpbCoreTitle">Core services</h2>
+          <div class="mt-6 grid md:grid-cols-3 gap-6">
+            <article class="bg-white rounded-brand shadow-card border border-slate-100 flex flex-col p-5 gap-3">
+              <div>
+                <h3 class="font-semibold text-brand-primary" data-i18n="coreDataTitle">Data &amp; quality</h3>
+                <p class="mt-2 text-sm text-slate-700" data-i18n="coreDataBody">Cleaning, connecting, and visualizing data to spot gaps in care and housing.</p>
+              </div>
+            </article>
+            <article class="bg-white rounded-brand shadow-card border border-slate-100 flex flex-col p-5 gap-3">
+              <div>
+                <h3 class="font-semibold text-brand-primary" data-i18n="coreCollabTitle">Program collaboration</h3>
+                <p class="mt-2 text-sm text-slate-700" data-i18n="coreCollabBody">Co-design pilots with partners and translate findings into shared workflows.</p>
+              </div>
+            </article>
+            <article class="bg-white rounded-brand shadow-card border border-slate-100 flex flex-col p-5 gap-3">
+              <div>
+                <h3 class="font-semibold text-brand-primary" data-i18n="coreCommTitle">Community communications</h3>
+                <p class="mt-2 text-sm text-slate-700" data-i18n="coreCommBody">Clear summaries, dashboards, and workshops that keep residents, funders, and partners aligned.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-brand-wash">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+          <h2 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="projectsTitle">Projects &amp; Resources</h2>
+          <div class="mt-4 grid sm:grid-cols-2 gap-4">
+            <div class="rounded-brand bg-white shadow-card p-5 border border-slate-100">
+              <h3 class="font-semibold" data-i18n="projectCbhnaTitle">Will County Community Behavioral Health Needs Assessment (CBHNA)</h3>
+              <a class="mt-2 inline-flex btn btn-light" href="https://willgrundymedicalclinic.org/wp-content/uploads/2025/07/Final-Truncated_Formatted-CBHNA-Report-1-2.pdf" target="_blank" rel="noreferrer" data-i18n="viewCbhna">View CBHNA Report</a>
+            </div>
+            <div class="rounded-brand bg-white shadow-card p-5 border border-slate-100">
+              <h3 class="font-semibold" data-i18n="projectEquityTitle">Health Equity Focus Group Summary</h3>
+              <a class="mt-2 inline-flex btn btn-secondary" href="https://willgrundymedicalclinic.org/wp-content/uploads/2025/09/Racial-Health-Equity-Focus-Group-Summary.pdf" target="_blank" rel="noreferrer" data-i18n="viewEquitySummary">View Summary</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-12 bg-brand-secondary text-brand-black" aria-labelledby="footer-heading">
+      <div class="h-1 bg-gradient-to-r from-brand-primary to-brand-secondary" aria-hidden="true"></div>
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div>
+            <div class="flex items-center gap-3">
+              <img src="images/WGMC-Logo-Alternate-1-website.jpg" alt="WGMC logo" class="h-10 w-auto" />
+              <span class="font-semibold">WGMC</span>
+            </div>
+            <h3 class="mt-5 font-semibold">About WGMC</h3>
+            <p class="mt-2 text-black/80 text-sm leading-6">WGMC is a free care organization providing healthcare and social services in Will & Grundy Counties. Free medical and behavioral healthcare is provided to uninsured and underinsured adults, and free housing support and case management is provided to residents who are homeless or housing insecure.</p>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a href="tel:+18157263377" class="btn btn-light">📞 Call (815) 726-3377</a>
+              <a data-lang-href="patients.html" class="btn btn-outline bg-white/10">Patient Information</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold">Get Care</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-black/90">
+              <li><a class="hover:underline" data-lang-href="patients.html">Patient Information</a></li>
+              <li><a class="hover:underline" data-lang-href="become-a-volunteer.html">Become a Volunteer</a></li>
+              <li><a class="hover:underline" data-lang-href="partner-referrals.html">Partner Referrals</a></li>
+              <li><a class="hover:underline" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">Donate</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold">Programs</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-black/90">
+              <li><a class="hover:underline" data-lang-href="program-health-care-services.html">Healthcare Services</a></li>
+              <li><a class="hover:underline" data-lang-href="program-housing-outreach-case-management.html">Housing, Healthcare, and Hope (HHH)</a></li>
+              <li><a class="hover:underline" data-lang-href="program-community-research-data.html">Center for Advancement of Human Potential and Belonging (CAHPB)</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold">Visit</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-black/90">
+              <li><strong>Address:</strong> 213 East Cass Street, Joliet, IL 60432</li>
+              <li><strong>Phone:</strong> (815) 726-3377</li>
+              <li>
+                <strong>Hours:</strong>
+                <pre class="whitespace-pre-wrap font-sans text-sm mt-1">Monday–Thursday: 9:00 a.m. – 5:00 p.m.
+Saturday Clinics (Twice Monthly): 9:00 a.m. – 2:00 p.m. (By appointment only)</pre>
+              </li>
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-3" data-dropdown>
+              <a href="https://maps.google.com/?q=213+E+Cass+St,+Joliet,+IL+60432" target="_blank" rel="noreferrer" class="btn btn-light">🗺️ Open in Maps</a>
+              <div class="relative">
+                <button class="btn btn-secondary inline-flex items-center gap-2 dropdown-toggle" aria-haspopup="menu" aria-expanded="false">Donate <span aria-hidden>▾</span></button>
+                <div class="dropdown-panel menu-pop w-56 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+                  <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
+                  <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW" target="_blank" rel="noreferrer">Sponsor a Patient</a>
+                  <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://willgrundymedicalclinic.org/brick-by-brick/" target="_blank" rel="noreferrer">Brick by Brick</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 border-t border-black/10 pt-6 text-xs text-black/70 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>© <span id="year"></span> Will‑Grundy Medical Clinic</div>
+          <div class="space-x-4">
+            <a class="hover:underline" data-lang-href="patients.html">Get Care</a>
+            <a class="hover:underline" data-lang-href="index.html#programs">Programs</a>
+            <a class="hover:underline" data-lang-href="our-mission.html">About Us</a>
+            <a class="hover:underline" data-lang-href="become-a-volunteer.html">Get Involved</a>
+            <a class="hover:underline" data-lang-href="index.html#locations">Locations</a>
+            <a class="hover:underline" data-lang-href="index.html#support">Support</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="site-shell.js"></script>
+  <script>
+    (function(){
+      const dict = {
+        en: {
+          navGetCare: 'Get Care',
+          navPrograms: 'Programs',
+          navDonate: 'Donate',
+          ctaCall: 'Call (815) 726-3377',
+          heroTitle: 'Center for Advancement of Human Potential and Belonging (CAHPB)',
+          heroDesc: 'A multi-disciplinary team advancing data, program development, and communications to improve healthcare, housing, and human services in the community.',
+          callHelp: 'Call WGMC',
+          emailTeam: 'Email CAHPB',
+          overview1: 'The Center for Advancement of Human Potential and Belonging (CAHPB) is a multi-disciplinary team focused on data quality and insights, program development and collaboration opportunities, conducting research, and communicating key findings to the community, partners, and other interest holders to advance access to healthcare, housing, and human needs.',
+          overview2: 'Current work includes building actionable insights from community data, strengthening collaboration between programs, and sharing findings that improve access, equity, and belonging for residents.',
+          cahpbOverviewTitle: 'Overview',
+          getInvolvedTitle: 'Get Involved',
+          cahpbCoreTitle: 'Core services',
+          coreDataTitle: 'Data & quality',
+          coreDataBody: 'Cleaning, connecting, and visualizing data to spot gaps in care and housing.',
+          coreCollabTitle: 'Program collaboration',
+          coreCollabBody: 'Co-design pilots with partners and translate findings into shared workflows.',
+          coreCommTitle: 'Community communications',
+          coreCommBody: 'Clear summaries, dashboards, and workshops that keep residents, funders, and partners aligned.',
+          projectsTitle: 'Projects & Resources',
+          projectCbhnaTitle: 'Will County Community Behavioral Health Needs Assessment (CBHNA)',
+          viewCbhna: 'View CBHNA Report',
+          projectEquityTitle: 'Health Equity Focus Group Summary',
+          viewEquitySummary: 'View Summary',
+          intern1: 'Program & Policy internships',
+          intern2: 'Research and Analysis internships',
+          intern3: 'Communications internships'
+        },
+        es: {
+          navGetCare: 'Obtenga Atención',
+          navPrograms: 'Programas',
+          navDonate: 'Donar',
+          ctaCall: 'Llamar (815) 726-3377',
+          heroTitle: 'Centro para el Avance del Potencial Humano y la Pertenencia (CAHPB)',
+          heroDesc: 'Equipo multidisciplinario que impulsa datos, desarrollo de programas y comunicaciones para mejorar la atención médica, la vivienda y los servicios humanos en la comunidad.',
+          callHelp: 'Llamar a WGMC',
+          emailTeam: 'Enviar correo a CAHPB',
+          overview1: 'El Centro para el Avance del Potencial Humano y la Pertenencia (CAHPB) es un equipo multidisciplinario centrado en la calidad e información de los datos, el desarrollo de programas y oportunidades de colaboración, la realización de investigaciones y la comunicación de hallazgos clave para avanzar en el acceso a la atención médica, la vivienda y las necesidades humanas.',
+          overview2: 'El trabajo actual incluye generar conocimientos útiles de datos comunitarios, fortalecer la colaboración entre programas y compartir hallazgos que mejoren el acceso, la equidad y la pertenencia para los residentes.',
+          cahpbOverviewTitle: 'Descripción general',
+          getInvolvedTitle: 'Involúcrese',
+          cahpbCoreTitle: 'Servicios principales',
+          coreDataTitle: 'Datos y calidad',
+          coreDataBody: 'Limpieza, conexión y visualización de datos para identificar brechas en la atención y la vivienda.',
+          coreCollabTitle: 'Colaboración de programas',
+          coreCollabBody: 'Codiseñar pilotos con socios y traducir hallazgos en flujos de trabajo compartidos.',
+          coreCommTitle: 'Comunicaciones comunitarias',
+          coreCommBody: 'Resúmenes claros, paneles y talleres que mantienen alineados a residentes, financiadores y socios.',
+          projectsTitle: 'Proyectos y recursos',
+          projectCbhnaTitle: 'Evaluación de Necesidades de Salud Conductual del Condado de Will (CBHNA)',
+          viewCbhna: 'Ver informe de CBHNA',
+          projectEquityTitle: 'Resumen del grupo focal sobre equidad en salud',
+          viewEquitySummary: 'Ver resumen',
+          intern1: 'Pasantías de programas y políticas',
+          intern2: 'Pasantías de investigación y análisis',
+          intern3: 'Pasantías de comunicaciones'
+        },
+        pl: {
+          navGetCare: 'Uzyskaj opiekę',
+          navPrograms: 'Programy',
+          navDonate: 'Przekaż darowiznę',
+          ctaCall: 'Zadzwoń (815) 726-3377',
+          heroTitle: 'Centrum Rozwoju Potencjału Ludzkiego i Poczucia Przynależności (CAHPB)',
+          heroDesc: 'Zespół multidyscyplinarny rozwijający dane, programy i komunikację, aby poprawić opiekę zdrowotną, mieszkalnictwo i usługi społeczne w społeczności.',
+          callHelp: 'Zadzwoń do WGMC',
+          emailTeam: 'Napisz do CAHPB',
+          overview1: 'Center for Advancement of Human Potential and Belonging (CAHPB) to zespół multidyscyplinarny skupiający się na jakości danych i wnioskach, rozwoju programów i współpracy, prowadzeniu badań oraz komunikowaniu kluczowych ustaleń, aby poprawić dostęp do opieki zdrowotnej, mieszkalnictwa i podstawowych potrzeb.',
+          overview2: 'Obecne działania obejmują budowanie praktycznych wniosków z danych społeczności, wzmacnianie współpracy między programami oraz dzielenie się wynikami, które poprawiają dostęp, równość i poczucie przynależności mieszkańców.',
+          cahpbOverviewTitle: 'Przegląd',
+          getInvolvedTitle: 'Zaangażuj się',
+          cahpbCoreTitle: 'Kluczowe usługi',
+          coreDataTitle: 'Dane i jakość',
+          coreDataBody: 'Oczyszczanie, łączenie i wizualizacja danych, aby dostrzec luki w opiece i mieszkalnictwie.',
+          coreCollabTitle: 'Współpraca programowa',
+          coreCollabBody: 'Wspólne projektowanie pilotaży z partnerami i przekładanie wniosków na wspólne procesy.',
+          coreCommTitle: 'Komunikacja ze społecznością',
+          coreCommBody: 'Przejrzyste podsumowania, panele i warsztaty, które utrzymują zgodność mieszkańców, fundatorów i partnerów.',
+          projectsTitle: 'Projekty i zasoby',
+          projectCbhnaTitle: 'Ocena potrzeb zdrowia behawioralnego hrabstwa Will (CBHNA)',
+          viewCbhna: 'Zobacz raport CBHNA',
+          projectEquityTitle: 'Podsumowanie grup fokusowych dotyczących równości zdrowotnej',
+          viewEquitySummary: 'Zobacz podsumowanie',
+          intern1: 'Staże programowe i polityczne',
+          intern2: 'Staże badawcze i analityczne',
+          intern3: 'Staże komunikacyjne'
+        },
+        ar: {
+          navGetCare: 'الحصول على الرعاية',
+          navPrograms: 'البرامج',
+          navDonate: 'التبرع',
+          ctaCall: 'اتصل على ‎(815) 726-3377‎',
+          heroTitle: 'مركز تطوير الإمكانات البشرية والانتماء (CAHPB)',
+          heroDesc: 'فريق متعدد التخصصات يطور البيانات وتطوير البرامج والاتصالات لتحسين الرعاية الصحية والسكن والخدمات الإنسانية في المجتمع.',
+          callHelp: 'اتصل بـ WGMC',
+          emailTeam: 'راسل CAHPB',
+          overview1: 'مركز تطوير الإمكانات البشرية والانتماء (CAHPB) هو فريق متعدد التخصصات يركز على جودة البيانات والرؤى، وتطوير البرامج وفرص التعاون، وإجراء البحوث، وإيصال النتائج الرئيسية لتعزيز الوصول إلى الرعاية الصحية والسكن والاحتياجات الإنسانية.',
+          overview2: 'يشمل العمل الحالي بناء رؤى عملية من بيانات المجتمع، وتعزيز التعاون بين البرامج، ومشاركة النتائج التي تحسن الوصول والإنصاف والانتماء للسكان.',
+          cahpbOverviewTitle: 'نظرة عامة',
+          getInvolvedTitle: 'شارك',
+          cahpbCoreTitle: 'الخدمات الأساسية',
+          coreDataTitle: 'البيانات والجودة',
+          coreDataBody: 'تنظيف وربط وتصوير البيانات لاكتشاف الفجوات في الرعاية والسكن.',
+          coreCollabTitle: 'تعاون البرامج',
+          coreCollabBody: 'تصميم تجارب مشتركة مع الشركاء وتحويل النتائج إلى سير عمل مشتركة.',
+          coreCommTitle: 'اتصالات المجتمع',
+          coreCommBody: 'ملخصات واضحة ولوحات معلومات وورش عمل تحافظ على توافق السكان والممولين والشركاء.',
+          projectsTitle: 'المشاريع والموارد',
+          projectCbhnaTitle: 'تقييم احتياجات الصحة السلوكية لمقاطعة ويل (CBHNA)',
+          viewCbhna: 'عرض تقرير CBHNA',
+          projectEquityTitle: 'ملخص مجموعة التركيز حول العدالة الصحية',
+          viewEquitySummary: 'عرض الملخص',
+          intern1: 'تدريبات البرامج والسياسات',
+          intern2: 'تدريبات البحث والتحليل',
+          intern3: 'تدريبات الاتصالات'
+        }
+      };
+      initPage(dict);
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+  <script src="chatbot.js"></script>
+</html>

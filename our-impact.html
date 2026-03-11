@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WGMC — Our Impact</title>
+    <meta name="theme-color" content="#319FCA" />
+    <meta name="description" content="Stories and metrics about WGMC impact." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      tailwind = window.tailwind || {};
+      tailwind.config = { theme: { extend: { colors: { brand: { primary: 'var(--brand-primary)', secondary: 'var(--brand-secondary)', black: 'var(--brand-black)', white: 'var(--brand-white)' }, text: 'var(--text-color)', muted: 'var(--muted-bg)' }, borderRadius: { brand: 'var(--radius)' }, boxShadow: { card: 'var(--shadow)' } } } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hero { background-image: radial-gradient(circle at 10% 20%, rgba(var(--brand-primary-rgb), 0.12), transparent 35%), radial-gradient(circle at 80% 10%, rgba(var(--brand-secondary-rgb), 0.12), transparent 30%), linear-gradient(135deg, #ffffffee, rgba(var(--brand-secondary-rgb), 0.25)); }
+    </style>
+  </head>
+  <body class="bg-white text-text font-sans">
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200" data-site-nav>
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between" aria-label="Main">
+        <a data-lang-href="index.html#home" class="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary rounded-md">
+          <img src="images/WGMC-Logo-Alternate-1-website.jpg" alt="WGMC logo" class="h-8 w-auto" />
+          <span class="font-semibold text-brand-primary hidden sm:inline">WGMC</span>
+        </a>
+        <button class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md border border-slate-300 text-slate-700" aria-label="Open menu" aria-expanded="false" data-mobile-toggle>☰</button>
+        <div class="hidden md:flex items-center gap-6 text-sm font-semibold">
+          <a data-lang-href="patients.html" class="hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary rounded-md" data-i18n="navGetCare">Get Care</a>
+          <div class="relative" data-dropdown>
+            <button class="inline-flex items-center gap-1 px-2 py-2 rounded-md hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary dropdown-toggle" aria-haspopup="menu" aria-expanded="false">
+              <span data-i18n="navPrograms">Programs</span> <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-80 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a data-lang-href="program-health-care-services.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Healthcare Services</a>
+              <a data-lang-href="program-housing-outreach-case-management.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Housing, Healthcare, and Hope (HHH)</a>
+              <a data-lang-href="program-community-research-data.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Center for Advancement of Human Potential and Belonging (CAHPB)</a>
+            </div>
+          </div>
+          <div class="relative" data-dropdown>
+            <button class="inline-flex items-center gap-1 px-2 py-2 rounded-md hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary dropdown-toggle" aria-haspopup="menu" aria-expanded="false">
+              About Us <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-72 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a data-lang-href="our-mission.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Mission</a>
+              <a data-lang-href="our-impact.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Impact</a>
+              <a data-lang-href="our-leaders.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Leaders</a>
+              <a data-lang-href="our-partners.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Partners</a>
+              <a data-lang-href="our-board-of-directors.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Board of Directors</a>
+            </div>
+          </div>
+          <div class="relative" data-dropdown>
+            <button class="inline-flex items-center gap-1 px-2 py-2 rounded-md hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary dropdown-toggle" aria-haspopup="menu" aria-expanded="false">
+              Get Involved <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-64 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a data-lang-href="become-a-volunteer.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Become a Volunteer</a>
+              <a data-lang-href="partner-referrals.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Partner Referrals</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:inline-block" data-dropdown>
+            <button class="btn btn-secondary inline-flex items-center gap-2 dropdown-toggle" aria-haspopup="menu" aria-expanded="false" data-i18n="navDonate">
+              Donate <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-56 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
+              <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW" target="_blank" rel="noreferrer">Sponsor a Patient</a>
+              <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://willgrundymedicalclinic.org/brick-by-brick/" target="_blank" rel="noreferrer">Brick by Brick</a>
+            </div>
+          </div>
+          <div class="lang-select-wrapper">
+            <select id="langSelect" class="lang-select" aria-label="Change language">
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="pl">Polski</option>
+              <option value="ar">العربية</option>
+            </select>
+            <span class="lang-select-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path fill="currentColor" d="M7 10l5 5 5-5H7z" />
+              </svg>
+            </span>
+          </div>
+          <a href="tel:+18157263377" class="hidden sm:inline-flex btn btn-primary" data-i18n="ctaCall"><span>📞</span> Call (815) 726-3377</a>
+        </div>
+      </nav>
+      <div class="md:hidden border-t border-slate-200 bg-white hidden" data-mobile-menu>
+        <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm font-semibold">
+          <a data-lang-href="patients.html" class="py-2" data-i18n="navGetCare">Get Care</a>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="programs" aria-expanded="false">
+            <span data-i18n="navPrograms">Programs</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="programs">
+            <a data-lang-href="program-health-care-services.html" class="py-1">Healthcare Services</a>
+            <a data-lang-href="program-housing-outreach-case-management.html" class="py-1">Housing, Healthcare, and Hope (HHH)</a>
+            <a data-lang-href="program-community-research-data.html" class="py-1">Center for Advancement of Human Potential and Belonging (CAHPB)</a>
+          </div>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="about" aria-expanded="false">
+            <span>About Us</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="about">
+            <a data-lang-href="our-mission.html" class="py-1">Our Mission</a>
+            <a data-lang-href="our-impact.html" class="py-1">Our Impact</a>
+            <a data-lang-href="our-leaders.html" class="py-1">Our Leaders</a>
+            <a data-lang-href="our-partners.html" class="py-1">Our Partners</a>
+            <a data-lang-href="our-board-of-directors.html" class="py-1">Our Board of Directors</a>
+          </div>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="involved" aria-expanded="false">
+            <span>Get Involved</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="involved">
+            <a data-lang-href="become-a-volunteer.html" class="py-1">Become a Volunteer</a>
+            <a data-lang-href="partner-referrals.html" class="py-1">Partner Referrals</a>
+          </div>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="donate" aria-expanded="false">
+            <span data-i18n="navDonate">Donate</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="donate">
+            <a class="py-1" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
+            <a class="py-1" href="https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW" target="_blank" rel="noreferrer">Sponsor a Patient</a>
+            <a class="py-1" href="https://willgrundymedicalclinic.org/brick-by-brick/" target="_blank" rel="noreferrer">Brick by Brick</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+          <h1 class="text-3xl sm:text-4xl font-bold text-brand-primary heading-accent" data-i18n="heroTitle">Our Impact</h1>
+          <p class="mt-3 text-lg text-slate-700 max-w-3xl" data-i18n="heroDesc">With community partners, volunteers, and donors, WGMC delivers millions of dollars in free healthcare and support across Will & Grundy Counties.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+          <div class="rounded-brand bg-white shadow-card p-6 border border-slate-100">
+            <div class="flex flex-col gap-3">
+              <div class="flex items-start justify-between gap-4">
+                <h2 class="text-xl font-semibold text-brand-primary heading-accent">Impact Highlights</h2>
+                <span class="inline-flex items-center gap-2 rounded-full bg-brand-primary/10 text-brand-primary px-3 py-1 text-sm font-semibold">FY 2023–2024</span>
+              </div>
+              <p class="text-slate-700">WGMC provided over $5.3 million in healthcare through free clinic visits, diagnostics, medications, and specialty care supported by generous partners.</p>
+            </div>
+
+            <div class="mt-6 grid gap-4 md:grid-cols-3">
+              <div class="rounded-brand border border-slate-100 bg-brand-wash p-4 shadow-card">
+                <p class="text-sm font-semibold text-brand-primary">Value of Care Delivered</p>
+                <p class="mt-2 text-3xl font-bold text-slate-900">$5.3M+</p>
+                <p class="text-sm text-slate-700 mt-1">In free healthcare for WGMC patients during the 2023–2024 fiscal year.</p>
+              </div>
+              <div class="rounded-brand border border-slate-100 bg-white p-4 shadow-sm">
+                <p class="text-sm font-semibold text-brand-primary">Silver Cross Hospital</p>
+                <p class="mt-2 text-lg font-bold text-slate-900">15 patients</p>
+                <p class="text-sm text-slate-700">Surgical procedures and 1,450+ donated services including pathology, radiology, diagnostic tests, treatments, and in‑patient care.</p>
+              </div>
+              <div class="rounded-brand border border-slate-100 bg-white p-4 shadow-sm">
+                <p class="text-sm font-semibold text-brand-primary">AMITA Health St. Joseph’s Medical Center</p>
+                <p class="mt-2 text-lg font-bold text-slate-900">11 patients</p>
+                <p class="text-sm text-slate-700">Surgical procedures and 1,300+ donated services including pathology, radiology, diagnostic tests, and treatments.</p>
+              </div>
+            </div>
+
+            <div class="mt-4 grid gap-4 md:grid-cols-2">
+              <div class="rounded-brand border border-slate-100 bg-white p-4 shadow-sm">
+                <p class="text-sm font-semibold text-brand-primary">Morris Community Hospital, AMSURG, AMITA Adventist Bolingbrook</p>
+                <p class="mt-2 text-lg font-bold text-slate-900">85 diagnostic tests</p>
+                <p class="text-sm text-slate-700">Tests and related services valued at nearly $34,000 for WGMC patients.</p>
+              </div>
+              <div class="rounded-brand border border-dashed border-brand-primary/40 bg-brand-primary/5 p-4 shadow-sm">
+                <p class="text-sm font-semibold text-brand-primary">How WGMC delivers impact</p>
+                <ul class="mt-2 space-y-1 text-sm text-slate-700">
+                  <li class="flex items-start gap-2"><span class="mt-1 text-brand-primary">•</span><span>Coordinated specialty care and surgeries through hospital partners.</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-1 text-brand-primary">•</span><span>Free diagnostics, labs, treatments, and medications for patients who would otherwise go without.</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-1 text-brand-primary">•</span><span>Volunteer clinicians and staff who provide a medical home and reduce unnecessary ER visits.</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="text-lg font-semibold text-brand-primary">Impact snapshots</h3>
+              <p class="text-slate-700 mt-1">Key metrics from the 2023–2024 fiscal year.</p>
+              <div class="mt-4 grid gap-4 md:grid-cols-2">
+                <div class="rounded-brand border border-slate-100 bg-white shadow-card p-5">
+                  <p class="text-sm font-semibold text-brand-primary">Volunteer commitment</p>
+                  <p class="mt-2 text-3xl font-bold text-slate-900">10,000+</p>
+                  <p class="text-sm text-slate-700 mt-1">Hours volunteered</p>
+                </div>
+                <div class="rounded-brand border border-slate-100 bg-white shadow-card p-5">
+                  <p class="text-sm font-semibold text-brand-primary">Volunteer team</p>
+                  <p class="mt-2 text-3xl font-bold text-slate-900">160+</p>
+                  <ul class="mt-2 space-y-1 text-sm text-slate-700">
+                    <li>107 Providers</li>
+                    <li>13 Administrators</li>
+                    <li>5 Equity Interns</li>
+                    <li>3 Registered Nurses</li>
+                    <li>2 Pharmacists</li>
+                  </ul>
+                </div>
+                <div class="rounded-brand border border-slate-100 bg-white shadow-card p-5">
+                  <p class="text-sm font-semibold text-brand-primary">Clinic access</p>
+                  <p class="mt-2 text-3xl font-bold text-slate-900">6,700+</p>
+                  <p class="text-sm text-slate-700 mt-1">Clinic visits with 211 new patients seen</p>
+                </div>
+                <div class="rounded-brand border border-slate-100 bg-white shadow-card p-5">
+                  <p class="text-sm font-semibold text-brand-primary">Housing, Healthcare, and Hope (HHH)</p>
+                  <p class="mt-2 text-3xl font-bold text-slate-900">2,500+</p>
+                  <p class="text-sm text-slate-700 mt-1">HHH visits supporting housing and health stability</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-12 bg-brand-secondary text-brand-black" aria-labelledby="footer-heading">
+      <div class="h-1 bg-gradient-to-r from-brand-primary to-brand-secondary" aria-hidden="true"></div>
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div>
+            <div class="flex items-center gap-3">
+              <img src="images/WGMC-Logo-Alternate-1-website.jpg" alt="WGMC logo" class="h-10 w-auto" />
+              <span class="font-semibold">WGMC</span>
+            </div>
+            <h3 class="mt-5 font-semibold">About WGMC</h3>
+            <p class="mt-2 text-black/80 text-sm leading-6">WGMC is a free care organization providing healthcare and social services in Will & Grundy Counties. Free medical and behavioral healthcare is provided to uninsured and underinsured adults, and free housing support and case management is provided to residents who are homeless or housing insecure.</p>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a href="tel:+18157263377" class="btn btn-light">📞 Call (815) 726-3377</a>
+              <a data-lang-href="patients.html" class="btn btn-outline bg-white/10">Patient Information</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold">Get Care</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-black/90">
+              <li><a class="hover:underline" data-lang-href="patients.html">Patient Information</a></li>
+              <li><a class="hover:underline" data-lang-href="become-a-volunteer.html">Become a Volunteer</a></li>
+              <li><a class="hover:underline" data-lang-href="partner-referrals.html">Partner Referrals</a></li>
+              <li><a class="hover:underline" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">Donate</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold">Programs</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-black/90">
+              <li><a class="hover:underline" data-lang-href="program-health-care-services.html">Healthcare Services</a></li>
+              <li><a class="hover:underline" data-lang-href="program-housing-outreach-case-management.html">Housing, Healthcare, and Hope (HHH)</a></li>
+              <li><a class="hover:underline" data-lang-href="program-community-research-data.html">Center for Advancement of Human Potential and Belonging (CAHPB)</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold">Visit</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-black/90">
+              <li><strong>Address:</strong> 213 East Cass Street, Joliet, IL 60432</li>
+              <li><strong>Phone:</strong> (815) 726-3377</li>
+              <li>
+                <strong>Hours:</strong>
+                <pre class="whitespace-pre-wrap font-sans text-sm mt-1">Monday–Thursday: 9:00 a.m. – 5:00 p.m.
+Saturday Clinics (Twice Monthly): 9:00 a.m. – 2:00 p.m. (By appointment only)</pre>
+              </li>
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-3" data-dropdown>
+              <a href="https://maps.google.com/?q=213+E+Cass+St,+Joliet,+IL+60432" target="_blank" rel="noreferrer" class="btn btn-light">🗺️ Open in Maps</a>
+              <div class="relative">
+                <button class="btn btn-secondary inline-flex items-center gap-2 dropdown-toggle" aria-haspopup="menu" aria-expanded="false">Donate <span aria-hidden>▾</span></button>
+                <div class="dropdown-panel menu-pop w-56 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+                  <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
+                  <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW" target="_blank" rel="noreferrer">Sponsor a Patient</a>
+                  <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://willgrundymedicalclinic.org/brick-by-brick/" target="_blank" rel="noreferrer">Brick by Brick</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 border-t border-black/10 pt-6 text-xs text-black/70 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>© <span id="year"></span> Will‑Grundy Medical Clinic</div>
+          <div class="space-x-4">
+            <a class="hover:underline" data-lang-href="patients.html">Get Care</a>
+            <a class="hover:underline" data-lang-href="index.html#programs">Programs</a>
+            <a class="hover:underline" data-lang-href="our-mission.html">About Us</a>
+            <a class="hover:underline" data-lang-href="become-a-volunteer.html">Get Involved</a>
+            <a class="hover:underline" data-lang-href="index.html#locations">Locations</a>
+            <a class="hover:underline" data-lang-href="index.html#support">Support</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="site-shell.js"></script>
+  <script>
+    (function(){
+      const dict = {
+      };
+      initPage(dict);
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+  <script src="chatbot.js"></script>
+</html>

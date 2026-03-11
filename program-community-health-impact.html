@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WGMC — Community Health Impact</title>
+    <meta name="theme-color" content="#319FCA" />
+    <meta name="description" content="Information on WGMC's community partnership approach." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      tailwind = window.tailwind || {};
+      tailwind.config = { theme: { extend: { colors: { brand: { primary: 'var(--brand-primary)', secondary: 'var(--brand-secondary)', black: 'var(--brand-black)', white: 'var(--brand-white)' }, text: 'var(--text-color)', muted: 'var(--muted-bg)' }, borderRadius: { brand: 'var(--radius)' }, boxShadow: { card: 'var(--shadow)' } } } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hero { background-image: radial-gradient(circle at 10% 20%, rgba(var(--brand-primary-rgb), 0.12), transparent 35%), radial-gradient(circle at 80% 10%, rgba(var(--brand-secondary-rgb), 0.12), transparent 30%), linear-gradient(135deg, #ffffffee, rgba(var(--brand-secondary-rgb), 0.25)); }
+    </style>
+  </head>
+  <body class="bg-white text-text font-sans">
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200" data-site-nav>
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between" aria-label="Main">
+        <a data-lang-href="index.html#home" class="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary rounded-md">
+          <img src="images/WGMC-Logo-Alternate-1-website.jpg" alt="WGMC logo" class="h-8 w-auto" />
+          <span class="font-semibold text-brand-primary hidden sm:inline">WGMC</span>
+        </a>
+        <button class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md border border-slate-300 text-slate-700" aria-label="Open menu" aria-expanded="false" data-mobile-toggle>☰</button>
+        <div class="hidden md:flex items-center gap-6 text-sm font-semibold">
+          <a data-lang-href="patients.html" class="hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary rounded-md" data-i18n="navGetCare">Get Care</a>
+          <div class="relative" data-dropdown>
+            <button class="inline-flex items-center gap-1 px-2 py-2 rounded-md hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary dropdown-toggle" aria-haspopup="menu" aria-expanded="false">
+              <span data-i18n="navPrograms">Programs</span> <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-80 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a data-lang-href="program-health-care-services.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Healthcare Services</a>
+              <a data-lang-href="program-housing-outreach-case-management.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Housing, Healthcare, and Hope (HHH)</a>
+              <a data-lang-href="program-community-research-data.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Center for Advancement of Human Potential and Belonging (CAHPB)</a>
+            </div>
+          </div>
+          <div class="relative" data-dropdown>
+            <button class="inline-flex items-center gap-1 px-2 py-2 rounded-md hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary dropdown-toggle" aria-haspopup="menu" aria-expanded="false">
+              About Us <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-72 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a data-lang-href="our-mission.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Mission</a>
+              <a data-lang-href="our-impact.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Impact</a>
+              <a data-lang-href="our-leaders.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Leaders</a>
+              <a data-lang-href="our-partners.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Partners</a>
+              <a data-lang-href="our-board-of-directors.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Board of Directors</a>
+            </div>
+          </div>
+          <div class="relative" data-dropdown>
+            <button class="inline-flex items-center gap-1 px-2 py-2 rounded-md hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary dropdown-toggle" aria-haspopup="menu" aria-expanded="false">
+              Get Involved <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-64 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a data-lang-href="become-a-volunteer.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Become a Volunteer</a>
+              <a data-lang-href="partner-referrals.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Partner Referrals</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:inline-block" data-dropdown>
+            <button class="btn btn-secondary inline-flex items-center gap-2 dropdown-toggle" aria-haspopup="menu" aria-expanded="false" data-i18n="navDonate">
+              Donate <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-56 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
+              <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW" target="_blank" rel="noreferrer">Sponsor a Patient</a>
+              <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://willgrundymedicalclinic.org/brick-by-brick/" target="_blank" rel="noreferrer">Brick by Brick</a>
+            </div>
+          </div>
+          <div class="lang-select-wrapper">
+            <select id="langSelect" class="lang-select" aria-label="Change language">
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="pl">Polski</option>
+              <option value="ar">العربية</option>
+            </select>
+            <span class="lang-select-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path fill="currentColor" d="M7 10l5 5 5-5H7z" />
+              </svg>
+            </span>
+          </div>
+          <a href="tel:+18157263377" class="hidden sm:inline-flex btn btn-primary" data-i18n="ctaCall"><span>📞</span> Call (815) 726-3377</a>
+        </div>
+      </nav>
+      <div class="md:hidden border-t border-slate-200 bg-white hidden" data-mobile-menu>
+        <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm font-semibold">
+          <a data-lang-href="patients.html" class="py-2" data-i18n="navGetCare">Get Care</a>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="programs" aria-expanded="false">
+            <span data-i18n="navPrograms">Programs</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="programs">
+            <a data-lang-href="program-health-care-services.html" class="py-1">Healthcare Services</a>
+            <a data-lang-href="program-housing-outreach-case-management.html" class="py-1">Housing, Healthcare, and Hope (HHH)</a>
+            <a data-lang-href="program-community-research-data.html" class="py-1">Center for Advancement of Human Potential and Belonging (CAHPB)</a>
+          </div>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="about" aria-expanded="false">
+            <span>About Us</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="about">
+            <a data-lang-href="our-mission.html" class="py-1">Our Mission</a>
+            <a data-lang-href="our-impact.html" class="py-1">Our Impact</a>
+            <a data-lang-href="our-leaders.html" class="py-1">Our Leaders</a>
+            <a data-lang-href="our-partners.html" class="py-1">Our Partners</a>
+            <a data-lang-href="our-board-of-directors.html" class="py-1">Our Board of Directors</a>
+          </div>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="involved" aria-expanded="false">
+            <span>Get Involved</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="involved">
+            <a data-lang-href="become-a-volunteer.html" class="py-1">Become a Volunteer</a>
+            <a data-lang-href="partner-referrals.html" class="py-1">Partner Referrals</a>
+          </div>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="donate" aria-expanded="false">
+            <span data-i18n="navDonate">Donate</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="donate">
+            <a class="py-1" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
+            <a class="py-1" href="https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW" target="_blank" rel="noreferrer">Sponsor a Patient</a>
+            <a class="py-1" href="https://willgrundymedicalclinic.org/brick-by-brick/" target="_blank" rel="noreferrer">Brick by Brick</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+          <div class="space-y-4">
+            <h1 class="text-3xl sm:text-4xl font-bold text-brand-primary heading-accent" data-i18n="heroTitle">Community Health Impact</h1>
+            <p class="text-lg text-slate-700 max-w-3xl" data-i18n="heroDesc">WGMC focuses on our Healthcare Services and Housing, Healthcare, and Hope programs. This program listing is not promoted separately.</p>
+            <div class="mt-2 flex flex-wrap gap-3">
+              <a data-lang-href="program-health-care-services.html" class="btn btn-primary" data-i18n="navHealthcareServices">Healthcare Services</a>
+              <a data-lang-href="program-housing-outreach-case-management.html" class="btn btn-outline" data-i18n="navHousingHHH">Housing, Healthcare, and Hope (HHH)</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-brand-wash">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+            <div>
+              <h2 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="showcaseTitle">Program showcase</h2>
+              <p class="mt-2 text-slate-700 max-w-3xl" data-i18n="showcaseDesc">Explore how our core programs combine healthcare, housing support, and research to improve community health.</p>
+            </div>
+            <a data-lang-href="patients.html" class="btn btn-secondary" data-i18n="patientInfo">Patient Information</a>
+          </div>
+          <div class="mt-6 grid md:grid-cols-3 gap-6">
+            <article class="bg-white rounded-brand shadow-card border border-slate-100 flex flex-col p-5 gap-3">
+              <div>
+                <h3 class="font-semibold text-brand-primary" data-i18n="cardHealthcareTitle">Healthcare Services</h3>
+                <p class="mt-2 text-sm text-slate-700" data-i18n="cardHealthcareDesc">Free primary care, specialty care, behavioral health, labs, and medications for uninsured and underinsured adults.</p>
+              </div>
+              <a data-lang-href="program-health-care-services.html" class="btn btn-light w-full justify-center" data-i18n="viewProgram">View program</a>
+            </article>
+            <article class="bg-white rounded-brand shadow-card border border-slate-100 flex flex-col p-5 gap-3">
+              <div>
+                <h3 class="font-semibold text-brand-primary" data-i18n="cardHHHTitle">Housing, Healthcare, and Hope (HHH)</h3>
+                <p class="mt-2 text-sm text-slate-700" data-i18n="cardHHHDesc">Street outreach, case management, rental assistance, and medical respite to stabilize housing and health.</p>
+              </div>
+              <a data-lang-href="program-housing-outreach-case-management.html" class="btn btn-light w-full justify-center" data-i18n="viewProgram">View program</a>
+            </article>
+            <article class="bg-white rounded-brand shadow-card border border-slate-100 flex flex-col p-5 gap-3">
+              <div>
+                <h3 class="font-semibold text-brand-primary" data-i18n="cardCahpbTitle">Center for Advancement of Human Potential and Belonging (CAHPB)</h3>
+                <p class="mt-2 text-sm text-slate-700" data-i18n="cardCahpbDesc">Data, research, and partnership support that strengthen programs and amplify community voice.</p>
+              </div>
+              <a data-lang-href="program-community-research-data.html" class="btn btn-light w-full justify-center" data-i18n="viewProgram">View program</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-brand shadow-card p-6 border border-slate-100">
+            <h2 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="chiApproachTitle">Our approach</h2>
+            <p class="mt-3 text-slate-700" data-i18n="chiApproachBody1">WGMC integrates community partnerships into every program to expand access to healthcare, housing, and supportive services. Patients and residents connect directly through our active programs above.</p>
+            <p class="mt-3 text-slate-700" data-i18n="chiApproachBody2">For questions about partnerships, please call (815) 726-3377.</p>
+          </div>
+          <div class="bg-brand-wash rounded-brand shadow-card p-6 border border-slate-100">
+            <h3 class="text-lg font-semibold text-brand-primary" data-i18n="chiNeedCareTitle">Need care?</h3>
+            <p class="mt-2 text-slate-700" data-i18n="chiNeedCareBody">Visit our Healthcare Services page or call WGMC for assistance.</p>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a data-lang-href="patients.html" class="btn btn-secondary" data-i18n="patientInfo">Patient Information</a>
+              <a href="tel:+18157263377" class="btn btn-primary" data-i18n="ctaCall">📞 Call (815) 726-3377</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-12 bg-brand-secondary text-brand-black" aria-labelledby="footer-heading">
+      <div class="h-1 bg-gradient-to-r from-brand-primary to-brand-secondary" aria-hidden="true"></div>
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div>
+            <div class="flex items-center gap-3">
+              <img src="images/WGMC-Logo-Alternate-1-website.jpg" alt="WGMC logo" class="h-10 w-auto" />
+              <span class="font-semibold">WGMC</span>
+            </div>
+            <h3 class="mt-5 font-semibold">About WGMC</h3>
+            <p class="mt-2 text-black/80 text-sm leading-6">WGMC is a free care organization providing healthcare and social services in Will & Grundy Counties. Free medical and behavioral healthcare is provided to uninsured and underinsured adults, and free housing support and case management is provided to residents who are homeless or housing insecure.</p>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a href="tel:+18157263377" class="btn btn-light">📞 Call (815) 726-3377</a>
+              <a data-lang-href="patients.html" class="btn btn-outline bg-white/10">Patient Information</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold">Get Care</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-black/90">
+              <li><a class="hover:underline" data-lang-href="patients.html">Patient Information</a></li>
+              <li><a class="hover:underline" data-lang-href="become-a-volunteer.html">Become a Volunteer</a></li>
+              <li><a class="hover:underline" data-lang-href="partner-referrals.html">Partner Referrals</a></li>
+              <li><a class="hover:underline" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">Donate</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold">Programs</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-black/90">
+              <li><a class="hover:underline" data-lang-href="program-health-care-services.html">Healthcare Services</a></li>
+              <li><a class="hover:underline" data-lang-href="program-housing-outreach-case-management.html">Housing, Healthcare, and Hope (HHH)</a></li>
+              <li><a class="hover:underline" data-lang-href="program-community-research-data.html">Center for Advancement of Human Potential and Belonging (CAHPB)</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold">Visit</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-black/90">
+              <li><strong>Address:</strong> 213 East Cass Street, Joliet, IL 60432</li>
+              <li><strong>Phone:</strong> (815) 726-3377</li>
+              <li>
+                <strong>Hours:</strong>
+                <pre class="whitespace-pre-wrap font-sans text-sm mt-1">Monday–Thursday: 9:00 a.m. – 5:00 p.m.
+Saturday Clinics (Twice Monthly): 9:00 a.m. – 2:00 p.m. (By appointment only)</pre>
+              </li>
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-3" data-dropdown>
+              <a href="https://maps.google.com/?q=213+E+Cass+St,+Joliet,+IL+60432" target="_blank" rel="noreferrer" class="btn btn-light">🗺️ Open in Maps</a>
+              <div class="relative">
+                <button class="btn btn-secondary inline-flex items-center gap-2 dropdown-toggle" aria-haspopup="menu" aria-expanded="false">Donate <span aria-hidden>▾</span></button>
+                <div class="dropdown-panel menu-pop w-56 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+                  <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
+                  <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW" target="_blank" rel="noreferrer">Sponsor a Patient</a>
+                  <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://willgrundymedicalclinic.org/brick-by-brick/" target="_blank" rel="noreferrer">Brick by Brick</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 border-t border-black/10 pt-6 text-xs text-black/70 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>© <span id="year"></span> Will‑Grundy Medical Clinic</div>
+          <div class="space-x-4">
+            <a class="hover:underline" data-lang-href="patients.html">Get Care</a>
+            <a class="hover:underline" data-lang-href="index.html#programs">Programs</a>
+            <a class="hover:underline" data-lang-href="our-mission.html">About Us</a>
+            <a class="hover:underline" data-lang-href="become-a-volunteer.html">Get Involved</a>
+            <a class="hover:underline" data-lang-href="index.html#locations">Locations</a>
+            <a class="hover:underline" data-lang-href="index.html#support">Support</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="site-shell.js"></script>
+  <script>
+    (function(){
+      const dict = {
+        en: {
+          navGetCare: 'Get Care',
+          navPrograms: 'Programs',
+          navDonate: 'Donate',
+          ctaCall: 'Call (815) 726-3377',
+          navHealthcareServices: 'Healthcare Services',
+          navHousingHHH: 'Housing, Healthcare, and Hope (HHH)',
+          heroTitle: 'Community Health Impact',
+          heroDesc: 'WGMC focuses on our Healthcare Services and Housing, Healthcare, and Hope programs. This program listing is not promoted separately.',
+          showcaseTitle: 'Program showcase',
+          showcaseDesc: 'Explore how our core programs combine healthcare, housing support, and research to improve community health.',
+          cardHealthcareTitle: 'Healthcare Services',
+          cardHealthcareDesc: 'Free primary care, specialty care, behavioral health, labs, and medications for uninsured and underinsured adults.',
+          cardHHHTitle: 'Housing, Healthcare, and Hope (HHH)',
+          cardHHHDesc: 'Street outreach, case management, rental assistance, and medical respite to stabilize housing and health.',
+          cardCahpbTitle: 'Center for Advancement of Human Potential and Belonging (CAHPB)',
+          cardCahpbDesc: 'Data, research, and partnership support that strengthen programs and amplify community voice.',
+          viewProgram: 'View program',
+          patientInfo: 'Patient Information',
+          chiApproachTitle: 'Our approach',
+          chiApproachBody1: 'WGMC integrates community partnerships into every program to expand access to healthcare, housing, and supportive services. Patients and residents connect directly through our active programs above.',
+          chiApproachBody2: 'For questions about partnerships, please call (815) 726-3377.',
+          chiNeedCareTitle: 'Need care?',
+          chiNeedCareBody: 'Visit our Healthcare Services page or call WGMC for assistance.'
+        },
+        es: {
+          navGetCare: 'Obtenga Atención',
+          navPrograms: 'Programas',
+          navDonate: 'Donar',
+          ctaCall: 'Llamar (815) 726-3377',
+          navHealthcareServices: 'Servicios de atención médica',
+          navHousingHHH: 'Vivienda, atención médica y esperanza (HHH)',
+          heroTitle: 'Impacto Comunitario en la Salud',
+          heroDesc: 'WGMC prioriza nuestros programas de Servicios de Atención Médica y Vivienda, Atención Médica y Esperanza. Este programa ya no se promociona por separado.',
+          showcaseTitle: 'Presentación de programas',
+          showcaseDesc: 'Explore cómo nuestros programas principales combinan atención médica, apoyo de vivienda e investigación para mejorar la salud comunitaria.',
+          cardHealthcareTitle: 'Servicios de atención médica',
+          cardHealthcareDesc: 'Atención primaria gratuita, atención especializada, salud conductual, laboratorios y medicamentos para adultos sin seguro o con seguro insuficiente.',
+          cardHHHTitle: 'Vivienda, atención médica y esperanza (HHH)',
+          cardHHHDesc: 'Alcance en la calle, gestión de casos, asistencia de alquiler y respiro médico para estabilizar vivienda y salud.',
+          cardCahpbTitle: 'Centro para el Avance del Potencial Humano y la Pertenencia (CAHPB)',
+          cardCahpbDesc: 'Datos, investigación y apoyo a asociaciones que fortalecen los programas y amplifican la voz de la comunidad.',
+          viewProgram: 'Ver programa',
+          patientInfo: 'Información para pacientes',
+          chiApproachTitle: 'Nuestro enfoque',
+          chiApproachBody1: 'WGMC integra asociaciones comunitarias en cada programa para ampliar el acceso a atención médica, vivienda y servicios de apoyo. Los pacientes y residentes se conectan directamente a través de nuestros programas activos anteriores.',
+          chiApproachBody2: 'Si tiene preguntas sobre asociaciones, llame al (815) 726-3377.',
+          chiNeedCareTitle: '¿Necesita atención?',
+          chiNeedCareBody: 'Visite nuestra página de Servicios de Atención Médica o llame a WGMC para obtener ayuda.'
+        },
+        pl: {
+          navGetCare: 'Uzyskaj opiekę',
+          navPrograms: 'Programy',
+          navDonate: 'Przekaż darowiznę',
+          ctaCall: 'Zadzwoń (815) 726-3377',
+          navHealthcareServices: 'Usługi opieki zdrowotnej',
+          navHousingHHH: 'Mieszkalnictwo, opieka zdrowotna i nadzieja (HHH)',
+          heroTitle: 'Wpływ zdrowia społeczności',
+          heroDesc: 'WGMC skupia się na programach Usługi opieki zdrowotnej oraz Housing, Healthcare, and Hope. Ten program nie jest promowany osobno.',
+          showcaseTitle: 'Prezentacja programów',
+          showcaseDesc: 'Poznaj, w jaki sposób nasze kluczowe programy łączą opiekę zdrowotną, wsparcie mieszkaniowe i badania, aby poprawiać zdrowie społeczności.',
+          cardHealthcareTitle: 'Usługi opieki zdrowotnej',
+          cardHealthcareDesc: 'Bezpłatna opieka podstawowa, specjalistyczna, zdrowie behawioralne, badania laboratoryjne i leki dla dorosłych bez ubezpieczenia lub z niewystarczającym ubezpieczeniem.',
+          cardHHHTitle: 'Mieszkalnictwo, opieka zdrowotna i nadzieja (HHH)',
+          cardHHHDesc: 'Outreach uliczny, zarządzanie sprawami, pomoc czynszowa i opieka wytchnieniowa medyczna, aby ustabilizować mieszkanie i zdrowie.',
+          cardCahpbTitle: 'Centrum Rozwoju Potencjału Ludzkiego i Poczucia Przynależności (CAHPB)',
+          cardCahpbDesc: 'Dane, badania i wsparcie partnerskie, które wzmacniają programy i wzmacniają głos społeczności.',
+          viewProgram: 'Zobacz program',
+          patientInfo: 'Informacje dla pacjentów',
+          chiApproachTitle: 'Nasze podejście',
+          chiApproachBody1: 'WGMC włącza partnerstwa społecznościowe do każdego programu, aby poszerzyć dostęp do opieki zdrowotnej, mieszkań i usług wspierających. Pacjenci i mieszkańcy łączą się bezpośrednio poprzez nasze aktywne programy powyżej.',
+          chiApproachBody2: 'W razie pytań dotyczących partnerstw prosimy dzwonić pod numer (815) 726-3377.',
+          chiNeedCareTitle: 'Potrzebujesz opieki?',
+          chiNeedCareBody: 'Odwiedź stronę Usługi opieki zdrowotnej lub zadzwoń do WGMC po pomoc.'
+        },
+        ar: {
+          navGetCare: 'الحصول على الرعاية',
+          navPrograms: 'البرامج',
+          navDonate: 'التبرع',
+          ctaCall: 'اتصل على ‎(815) 726-3377‎',
+          navHealthcareServices: 'خدمات الرعاية الصحية',
+          navHousingHHH: 'الإسكان والرعاية الصحية والأمل (HHH)',
+          heroTitle: 'أثر الصحة المجتمعية',
+          heroDesc: 'تركز WGMC على برامج خدمات الرعاية الصحية وبرنامج السكن والرعاية الصحية والأمل. لم نعد نعرض هذا البرنامج بشكل منفصل.',
+          showcaseTitle: 'عرض البرامج',
+          showcaseDesc: 'اكتشف كيف تجمع برامجنا الأساسية بين الرعاية الصحية ودعم السكن والبحث لتحسين صحة المجتمع.',
+          cardHealthcareTitle: 'خدمات الرعاية الصحية',
+          cardHealthcareDesc: 'رعاية أولية مجانية، رعاية تخصصية، صحة سلوكية، مختبرات وأدوية للبالغين غير المؤمن عليهم أو غير المؤمن عليهم بما يكفي.',
+          cardHHHTitle: 'الإسكان والرعاية الصحية والأمل (HHH)',
+          cardHHHDesc: 'تواصل ميداني، إدارة حالات، مساعدة إيجار ورعاية مؤقتة طبية لتحقيق استقرار السكن والصحة.',
+          cardCahpbTitle: 'مركز تطوير الإمكانات البشرية والانتماء (CAHPB)',
+          cardCahpbDesc: 'بيانات وبحوث ودعم للشراكات تعزز البرامج وتبرز صوت المجتمع.',
+          viewProgram: 'عرض البرنامج',
+          patientInfo: 'معلومات المريض',
+          chiApproachTitle: 'نهجنا',
+          chiApproachBody1: 'تدمج WGMC الشراكات المجتمعية في كل برنامج لتوسيع الوصول إلى الرعاية الصحية والإسكان والخدمات الداعمة. يتواصل المرضى والمقيمون مباشرةً من خلال برامجنا النشطة أعلاه.',
+          chiApproachBody2: 'للاستفسار عن الشراكات، يرجى الاتصال على ‎(815) 726-3377‎.',
+          chiNeedCareTitle: 'هل تحتاج إلى رعاية؟',
+          chiNeedCareBody: 'قم بزيارة صفحة خدمات الرعاية الصحية لدينا أو اتصل بـ WGMC للحصول على المساعدة.'
+        }
+      };
+      initPage(dict);
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+  <script src="chatbot.js"></script>
+</html>

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WGMC — Healthcare Services</title>
+    <meta name="theme-color" content="#319FCA" />
+    <meta name="description" content="Free healthcare for uninsured and underinsured adults in Will & Grundy Counties." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      tailwind = window.tailwind || {};
+      tailwind.config = { theme: { extend: { colors: { brand: { primary: 'var(--brand-primary)', secondary: 'var(--brand-secondary)', black: 'var(--brand-black)', white: 'var(--brand-white)' }, text: 'var(--text-color)', muted: 'var(--muted-bg)' }, borderRadius: { brand: 'var(--radius)' }, boxShadow: { card: 'var(--shadow)' } } } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hero { background-image: radial-gradient(circle at 10% 20%, rgba(var(--brand-primary-rgb), 0.12), transparent 35%), radial-gradient(circle at 80% 10%, rgba(var(--brand-secondary-rgb), 0.12), transparent 30%), linear-gradient(135deg, #ffffffee, rgba(var(--brand-secondary-rgb), 0.25)); }
+    </style>
+  </head>
+  <body class="bg-white text-text font-sans">
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200" data-site-nav>
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between" aria-label="Main">
+        <a data-lang-href="index.html#home" class="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary rounded-md">
+          <img src="images/WGMC-Logo-Alternate-1-website.jpg" alt="WGMC logo" class="h-8 w-auto" />
+          <span class="font-semibold text-brand-primary hidden sm:inline">WGMC</span>
+        </a>
+        <button class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md border border-slate-300 text-slate-700" aria-label="Open menu" aria-expanded="false" data-mobile-toggle>☰</button>
+        <div class="hidden md:flex items-center gap-6 text-sm font-semibold">
+          <a data-lang-href="patients.html" class="hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary rounded-md" data-i18n="navGetCare">Get Care</a>
+          <div class="relative" data-dropdown>
+            <button class="inline-flex items-center gap-1 px-2 py-2 rounded-md hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary dropdown-toggle" aria-haspopup="menu" aria-expanded="false">
+              <span data-i18n="navPrograms">Programs</span> <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-80 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a data-lang-href="program-health-care-services.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Healthcare Services</a>
+              <a data-lang-href="program-housing-outreach-case-management.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Housing, Healthcare, and Hope (HHH)</a>
+              <a data-lang-href="program-community-research-data.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Center for Advancement of Human Potential and Belonging (CAHPB)</a>
+            </div>
+          </div>
+          <div class="relative" data-dropdown>
+            <button class="inline-flex items-center gap-1 px-2 py-2 rounded-md hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary dropdown-toggle" aria-haspopup="menu" aria-expanded="false">
+              About Us <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-72 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a data-lang-href="our-mission.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Mission</a>
+              <a data-lang-href="our-impact.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Impact</a>
+              <a data-lang-href="our-leaders.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Leaders</a>
+              <a data-lang-href="our-partners.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Partners</a>
+              <a data-lang-href="our-board-of-directors.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Our Board of Directors</a>
+            </div>
+          </div>
+          <div class="relative" data-dropdown>
+            <button class="inline-flex items-center gap-1 px-2 py-2 rounded-md hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary dropdown-toggle" aria-haspopup="menu" aria-expanded="false">
+              Get Involved <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-64 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a data-lang-href="become-a-volunteer.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Become a Volunteer</a>
+              <a data-lang-href="partner-referrals.html" class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">Partner Referrals</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative hidden sm:inline-block" data-dropdown>
+            <button class="btn btn-secondary inline-flex items-center gap-2 dropdown-toggle" aria-haspopup="menu" aria-expanded="false" data-i18n="navDonate">
+              Donate <span aria-hidden>▾</span>
+            </button>
+            <div class="dropdown-panel menu-pop w-56 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+              <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
+              <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW" target="_blank" rel="noreferrer">Sponsor a Patient</a>
+              <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://willgrundymedicalclinic.org/brick-by-brick/" target="_blank" rel="noreferrer">Brick by Brick</a>
+            </div>
+          </div>
+          <div class="lang-select-wrapper">
+            <select id="langSelect" class="lang-select" aria-label="Change language">
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="pl">Polski</option>
+              <option value="ar">العربية</option>
+            </select>
+            <span class="lang-select-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path fill="currentColor" d="M7 10l5 5 5-5H7z" />
+              </svg>
+            </span>
+          </div>
+          <a href="tel:+18157263377" class="hidden sm:inline-flex btn btn-primary" data-i18n="ctaCall"><span>📞</span> Call (815) 726-3377</a>
+        </div>
+      </nav>
+      <div class="md:hidden border-t border-slate-200 bg-white hidden" data-mobile-menu>
+        <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm font-semibold">
+          <a data-lang-href="patients.html" class="py-2" data-i18n="navGetCare">Get Care</a>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="programs" aria-expanded="false">
+            <span data-i18n="navPrograms">Programs</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="programs">
+            <a data-lang-href="program-health-care-services.html" class="py-1">Healthcare Services</a>
+            <a data-lang-href="program-housing-outreach-case-management.html" class="py-1">Housing, Healthcare, and Hope (HHH)</a>
+            <a data-lang-href="program-community-research-data.html" class="py-1">Center for Advancement of Human Potential and Belonging (CAHPB)</a>
+          </div>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="about" aria-expanded="false">
+            <span>About Us</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="about">
+            <a data-lang-href="our-mission.html" class="py-1">Our Mission</a>
+            <a data-lang-href="our-impact.html" class="py-1">Our Impact</a>
+            <a data-lang-href="our-leaders.html" class="py-1">Our Leaders</a>
+            <a data-lang-href="our-partners.html" class="py-1">Our Partners</a>
+            <a data-lang-href="our-board-of-directors.html" class="py-1">Our Board of Directors</a>
+          </div>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="involved" aria-expanded="false">
+            <span>Get Involved</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="involved">
+            <a data-lang-href="become-a-volunteer.html" class="py-1">Become a Volunteer</a>
+            <a data-lang-href="partner-referrals.html" class="py-1">Partner Referrals</a>
+          </div>
+          <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="donate" aria-expanded="false">
+            <span data-i18n="navDonate">Donate</span>
+            <span aria-hidden>▾</span>
+          </button>
+          <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="donate">
+            <a class="py-1" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
+            <a class="py-1" href="https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW" target="_blank" rel="noreferrer">Sponsor a Patient</a>
+            <a class="py-1" href="https://willgrundymedicalclinic.org/brick-by-brick/" target="_blank" rel="noreferrer">Brick by Brick</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+          <h1 class="text-3xl sm:text-4xl font-bold text-brand-primary heading-accent" data-i18n="heroTitle">Healthcare Services</h1>
+          <p class="mt-3 text-lg text-slate-700 max-w-2xl" data-i18n="heroDesc">Free healthcare for uninsured and underinsured adults in Will & Grundy Counties.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="tel:+18157263377" class="btn btn-primary" data-i18n="callHelp">Call WGMC</a>
+            <a data-lang-href="patients.html" class="btn btn-outline" data-i18n="patientInfo">Patient Information</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-6">
+          <div class="bg-white rounded-brand shadow-card p-6 border border-slate-100">
+            <h2 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="hcsOverviewTitle">Overview</h2>
+            <p class="mt-3 text-slate-700" data-i18n="hcsOverviewBody1">WGMC's Healthcare program provides free healthcare for adults in Will & Grundy Counties who cannot access care elsewhere due to insurance or financial limitations. Healthcare services available to WGMC patients include primary care, specialty care, mental health services, diagnostic tests and labs, and prescription medications.</p>
+            <p class="mt-3 text-slate-700" data-i18n="hcsOverviewBody2">Our care team works with you to understand your needs, coordinate referrals when needed, and support you through follow-up and medications whenever possible.</p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="rounded-brand bg-white shadow-card p-6 border border-slate-100">
+              <h3 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="hcsEligibilityTitle">Eligibility</h3>
+              <p class="mt-3 text-slate-700" data-i18n="hcsEligibilityBody">Adults in Will & Grundy Counties who are uninsured or underinsured are welcome. If you are unsure whether you qualify, please call us — we will help you navigate options.</p>
+            </div>
+            <div class="rounded-brand bg-white shadow-card p-6 border border-slate-100">
+              <h3 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="hcsBringTitle">What to Bring</h3>
+              <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+                <li data-i18n="hcsBringId">Photo ID (if you have one)</li>
+                <li data-i18n="hcsBringMeds">Any medications you are currently taking</li>
+                <li data-i18n="hcsBringRecords">Any relevant medical records or notes</li>
+                <li data-i18n="hcsBringIncome">Proof of income (if available)</li>
+              </ul>
+            </div>
+            <div class="rounded-brand bg-white shadow-card p-6 border border-slate-100">
+              <h3 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="hcsVisitTitle">Your Visit</h3>
+              <p class="mt-3 text-slate-700" data-i18n="hcsVisitBody">Our team will guide you through check‑in and your appointment. Interpreters are available. There is no cost for care; donations are welcome but never required.</p>
+            </div>
+            <div class="rounded-brand bg-white shadow-card p-6 border border-slate-100">
+              <h3 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="hcsAftercareTitle">Aftercare</h3>
+              <p class="mt-3 text-slate-700" data-i18n="hcsAftercareBody">We help with follow‑ups, referrals, and access to medications whenever possible. Call us if you have questions after your visit.</p>
+            </div>
+          </div>
+          <div class="rounded-brand bg-brand-wash p-6 border border-slate-100 shadow-card">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold text-brand-primary" data-i18n="hcsCtaTitle">Ready to get care?</h3>
+                <p class="text-slate-700 mt-1" data-i18n="hcsCtaBody">Call (815) 726-3377 or view Patient Information to plan your visit.</p>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="tel:+18157263377" class="btn btn-primary" data-i18n="ctaCall">📞 Call (815) 726-3377</a>
+                <a data-lang-href="patients.html" class="btn btn-secondary" data-i18n="patientInfo">Patient Information</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-12 bg-brand-secondary text-brand-black" aria-labelledby="footer-heading">
+      <div class="h-1 bg-gradient-to-r from-brand-primary to-brand-secondary" aria-hidden="true"></div>
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div>
+            <div class="flex items-center gap-3">
+              <img src="images/WGMC-Logo-Alternate-1-website.jpg" alt="WGMC logo" class="h-10 w-auto" />
+              <span class="font-semibold">WGMC</span>
+            </div>
+            <h3 class="mt-5 font-semibold">About WGMC</h3>
+            <p class="mt-2 text-black/80 text-sm leading-6">WGMC is a free care organization providing healthcare and social services in Will & Grundy Counties. Free medical and behavioral healthcare is provided to uninsured and underinsured adults, and free housing support and case management is provided to residents who are homeless or housing insecure.</p>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a href="tel:+18157263377" class="btn btn-light">📞 Call (815) 726-3377</a>
+              <a data-lang-href="patients.html" class="btn btn-outline bg-white/10">Patient Information</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold">Get Care</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-black/90">
+              <li><a class="hover:underline" data-lang-href="patients.html">Patient Information</a></li>
+              <li><a class="hover:underline" data-lang-href="become-a-volunteer.html">Become a Volunteer</a></li>
+              <li><a class="hover:underline" data-lang-href="partner-referrals.html">Partner Referrals</a></li>
+              <li><a class="hover:underline" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">Donate</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold">Programs</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-black/90">
+              <li><a class="hover:underline" data-lang-href="program-health-care-services.html">Healthcare Services</a></li>
+              <li><a class="hover:underline" data-lang-href="program-housing-outreach-case-management.html">Housing, Healthcare, and Hope (HHH)</a></li>
+              <li><a class="hover:underline" data-lang-href="program-community-research-data.html">Center for Advancement of Human Potential and Belonging (CAHPB)</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold">Visit</h3>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-black/90">
+              <li><strong>Address:</strong> 213 East Cass Street, Joliet, IL 60432</li>
+              <li><strong>Phone:</strong> (815) 726-3377</li>
+              <li>
+                <strong>Hours:</strong>
+                <pre class="whitespace-pre-wrap font-sans text-sm mt-1">Monday–Thursday: 9:00 a.m. – 5:00 p.m.
+Saturday Clinics (Twice Monthly): 9:00 a.m. – 2:00 p.m. (By appointment only)</pre>
+              </li>
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-3" data-dropdown>
+              <a href="https://maps.google.com/?q=213+E+Cass+St,+Joliet,+IL+60432" target="_blank" rel="noreferrer" class="btn btn-light">🗺️ Open in Maps</a>
+              <div class="relative">
+                <button class="btn btn-secondary inline-flex items-center gap-2 dropdown-toggle" aria-haspopup="menu" aria-expanded="false">Donate <span aria-hidden>▾</span></button>
+                <div class="dropdown-panel menu-pop w-56 rounded-brand bg-white shadow-card border border-slate-200 p-2">
+                  <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
+                  <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW" target="_blank" rel="noreferrer">Sponsor a Patient</a>
+                  <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://willgrundymedicalclinic.org/brick-by-brick/" target="_blank" rel="noreferrer">Brick by Brick</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 border-t border-black/10 pt-6 text-xs text-black/70 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>© <span id="year"></span> Will‑Grundy Medical Clinic</div>
+          <div class="space-x-4">
+            <a class="hover:underline" data-lang-href="patients.html">Get Care</a>
+            <a class="hover:underline" data-lang-href="index.html#programs">Programs</a>
+            <a class="hover:underline" data-lang-href="our-mission.html">About Us</a>
+            <a class="hover:underline" data-lang-href="become-a-volunteer.html">Get Involved</a>
+            <a class="hover:underline" data-lang-href="index.html#locations">Locations</a>
+            <a class="hover:underline" data-lang-href="index.html#support">Support</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="site-shell.js"></script>
+  <script>
+    (function(){
+      const dict = {
+        en: {
+          navGetCare: 'Get Care',
+          navPrograms: 'Programs',
+          navDonate: 'Donate',
+          ctaCall: 'Call (815) 726-3377',
+          heroTitle: 'Healthcare Services',
+          heroDesc: 'Free healthcare for uninsured and underinsured adults in Will & Grundy Counties.',
+          callHelp: 'Call WGMC',
+          patientInfo: 'Patient Information',
+          hcsOverviewTitle: 'Overview',
+          hcsOverviewBody1: "WGMC's Healthcare program provides free healthcare for adults in Will & Grundy Counties who cannot access care elsewhere due to insurance or financial limitations. Healthcare services available to WGMC patients include primary care, specialty care, mental health services, diagnostic tests and labs, and prescription medications.",
+          hcsOverviewBody2: 'Our care team works with you to understand your needs, coordinate referrals when needed, and support you through follow-up and medications whenever possible.',
+          hcsEligibilityTitle: 'Eligibility',
+          hcsEligibilityBody: 'Adults in Will & Grundy Counties who are uninsured or underinsured are welcome. If you are unsure whether you qualify, please call us — we will help you navigate options.',
+          hcsBringTitle: 'What to Bring',
+          hcsBringId: 'Photo ID (if you have one)',
+          hcsBringMeds: 'Any medications you are currently taking',
+          hcsBringRecords: 'Any relevant medical records or notes',
+          hcsBringIncome: 'Proof of income (if available)',
+          hcsVisitTitle: 'Your Visit',
+          hcsVisitBody: 'Our team will guide you through check‑in and your appointment. Interpreters are available. There is no cost for care; donations are welcome but never required.',
+          hcsAftercareTitle: 'Aftercare',
+          hcsAftercareBody: 'We help with follow‑ups, referrals, and access to medications whenever possible. Call us if you have questions after your visit.',
+          hcsCtaTitle: 'Ready to get care?',
+          hcsCtaBody: 'Call (815) 726-3377 or view Patient Information to plan your visit.'
+        },
+        es: {
+          navGetCare: 'Obtenga Atención',
+          navPrograms: 'Programas',
+          navDonate: 'Donar',
+          ctaCall: 'Llamar (815) 726-3377',
+          heroTitle: 'Servicios de atención médica',
+          heroDesc: 'Atención médica gratuita para adultos sin seguro o con seguro insuficiente en los condados de Will y Grundy.',
+          callHelp: 'Llamar a WGMC',
+          patientInfo: 'Información para pacientes',
+          hcsOverviewTitle: 'Descripción general',
+          hcsOverviewBody1: 'El programa de atención médica de WGMC ofrece atención gratuita para adultos en los condados de Will y Grundy que no pueden acceder a la atención en otros lugares debido a limitaciones de seguro o financieras. Los servicios disponibles incluyen atención primaria, atención especializada, servicios de salud mental, pruebas y laboratorios de diagnóstico y medicamentos recetados.',
+          hcsOverviewBody2: 'Nuestro equipo de atención trabaja con usted para comprender sus necesidades, coordinar derivaciones cuando sea necesario y brindarle apoyo con el seguimiento y los medicamentos siempre que sea posible.',
+          hcsEligibilityTitle: 'Elegibilidad',
+          hcsEligibilityBody: 'Damos la bienvenida a adultos en los condados de Will y Grundy sin seguro o con seguro insuficiente. Si no está seguro de si califica, llámenos; le ayudaremos a revisar sus opciones.',
+          hcsBringTitle: 'Qué llevar',
+          hcsBringId: 'Identificación con foto (si la tiene)',
+          hcsBringMeds: 'Cualquier medicamento que esté tomando actualmente',
+          hcsBringRecords: 'Cualquier expediente o nota médica relevante',
+          hcsBringIncome: 'Comprobante de ingresos (si está disponible)',
+          hcsVisitTitle: 'Su visita',
+          hcsVisitBody: 'Nuestro equipo lo guiará durante el registro y su cita. Hay intérpretes disponibles. La atención no tiene costo; las donaciones son bienvenidas pero nunca requeridas.',
+          hcsAftercareTitle: 'Atención posterior',
+          hcsAftercareBody: 'Ayudamos con seguimientos, derivaciones y acceso a medicamentos siempre que sea posible. Llámenos si tiene preguntas después de su visita.',
+          hcsCtaTitle: '¿Listo para recibir atención?',
+          hcsCtaBody: 'Llame al (815) 726-3377 o consulte Información para pacientes para planificar su visita.'
+        },
+        pl: {
+          navGetCare: 'Uzyskaj opiekę',
+          navPrograms: 'Programy',
+          navDonate: 'Przekaż darowiznę',
+          ctaCall: 'Zadzwoń (815) 726-3377',
+          heroTitle: 'Usługi opieki zdrowotnej',
+          heroDesc: 'Bezpłatna opieka zdrowotna dla nieubezpieczonych i niedoubezpieczonych dorosłych w powiatach Will i Grundy.',
+          callHelp: 'Zadzwoń do WGMC',
+          patientInfo: 'Informacje dla pacjentów',
+          hcsOverviewTitle: 'Opis',
+          hcsOverviewBody1: 'Program opieki zdrowotnej WGMC zapewnia bezpłatną opiekę dorosłym w powiatach Will i Grundy, którzy nie mogą uzyskać opieki gdzie indziej z powodu ograniczeń ubezpieczenia lub finansowych. Dostępne usługi obejmują opiekę podstawową, specjalistyczną, zdrowie psychiczne, badania diagnostyczne i leki na receptę.',
+          hcsOverviewBody2: 'Nasz zespół opieki współpracuje z Tobą, aby zrozumieć Twoje potrzeby, koordynować skierowania w razie potrzeby i wspierać Cię podczas kontroli i w zakresie leków, kiedy to możliwe.',
+          hcsEligibilityTitle: 'Kwalifikowalność',
+          hcsEligibilityBody: 'Zapraszamy dorosłych w powiatach Will i Grundy, którzy są nieubezpieczeni lub niedoubezpieczeni. Jeśli nie jesteś pewien, czy się kwalifikujesz, zadzwoń do nas — pomożemy Ci omówić możliwości.',
+          hcsBringTitle: 'Co przynieść',
+          hcsBringId: 'Dowód tożsamości ze zdjęciem (jeśli masz)',
+          hcsBringMeds: 'Wszelkie leki, które obecnie przyjmujesz',
+          hcsBringRecords: 'Wszelkie istotne dokumenty medyczne lub notatki',
+          hcsBringIncome: 'Dowód dochodu (jeśli jest dostępny)',
+          hcsVisitTitle: 'Twoja wizyta',
+          hcsVisitBody: 'Nasz zespół przeprowadzi Cię przez rejestrację i wizytę. Dostępni są tłumacze. Opieka jest bezpłatna; darowizny są mile widziane, lecz nigdy wymagane.',
+          hcsAftercareTitle: 'Opieka po wizycie',
+          hcsAftercareBody: 'Pomagamy w wizytach kontrolnych, skierowaniach i dostępie do leków, gdy tylko jest to możliwe. Zadzwoń do nas, jeśli masz pytania po wizycie.',
+          hcsCtaTitle: 'Gotowy na opiekę?',
+          hcsCtaBody: 'Zadzwoń pod (815) 726-3377 lub zobacz Informacje dla pacjentów, aby zaplanować wizytę.'
+        },
+        ar: {
+          navGetCare: 'الحصول على الرعاية',
+          navPrograms: 'البرامج',
+          navDonate: 'التبرع',
+          ctaCall: 'اتصل على ‎(815) 726-3377‎',
+          heroTitle: 'خدمات الرعاية الصحية',
+          heroDesc: 'رعاية صحية مجانية للبالغين غير المؤمن عليهم أو غير المؤمن عليهم بما يكفي في مقاطعتي ويل وغرندي.',
+          callHelp: 'اتصل بـ WGMC',
+          patientInfo: 'معلومات المريض',
+          hcsOverviewTitle: 'نظرة عامة',
+          hcsOverviewBody1: 'يوفر برنامج الرعاية الصحية في WGMC رعاية مجانية للبالغين في مقاطعتي ويل وجرندي الذين لا يمكنهم الحصول على الرعاية في أماكن أخرى بسبب التأمين أو القيود المالية. تشمل الخدمات المتاحة للمرضى الرعاية الأولية، والرعاية المتخصصة، وخدمات الصحة النفسية، والفحوصات والمختبرات التشخيصية، والأدوية الموصوفة.',
+          hcsOverviewBody2: 'يعمل فريق الرعاية لدينا معك لفهم احتياجاتك وتنسيق الإحالات عند الحاجة ودعمك من خلال المتابعة والأدوية كلما أمكن ذلك.',
+          hcsEligibilityTitle: 'الأهلية',
+          hcsEligibilityBody: 'نرحب بالبالغين في مقاطعتي ويل وجرندي غير المؤمن عليهم أو غير المؤمن عليهم بما يكفي. إذا لم تكن متأكدًا من أهليتك، يرجى الاتصال بنا — سنساعدك في معرفة الخيارات.',
+          hcsBringTitle: 'ما الذي يجب إحضاره',
+          hcsBringId: 'هوية تحمل صورة (إذا كانت متوفرة)',
+          hcsBringMeds: 'أي أدوية تتناولها حاليًا',
+          hcsBringRecords: 'أي سجلات أو ملاحظات طبية ذات صلة',
+          hcsBringIncome: 'إثبات الدخل (إن وجد)',
+          hcsVisitTitle: 'زيارتك',
+          hcsVisitBody: 'سيرشدك فريقنا خلال التسجيل وموعدك. المترجمون متاحون. الرعاية مجانية؛ التبرعات مرحب بها لكنها غير مطلوبة.',
+          hcsAftercareTitle: 'الرعاية اللاحقة',
+          hcsAftercareBody: 'نساعد في المتابعة والإحالات والوصول إلى الأدوية كلما أمكن ذلك. اتصل بنا إذا كان لديك أسئلة بعد زيارتك.',
+          hcsCtaTitle: 'هل أنت جاهز للحصول على الرعاية؟',
+          hcsCtaBody: 'اتصل على ‎(815) 726-3377‎ أو راجع معلومات المريض لتخطيط زيارتك.'
+        }
+      };
+      initPage(dict);
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+  <script src="chatbot.js"></script>
+</html>
