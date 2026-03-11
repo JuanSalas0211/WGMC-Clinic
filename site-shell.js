@@ -39,7 +39,8 @@
       footerPhoneLabel: 'Phone:',
       footerAddressLabel: 'Address:',
       footerHoursLabel: 'Hours:',
-      footerHoursValue: 'Monday–Thursday: 9:00 a.m. – 5:00 p.m.\nSaturday Clinics (Twice Monthly): 9:00 a.m. – 2:00 p.m. (By appointment only)'
+      footerHoursValue: 'Monday–Thursday: 9:00 a.m. – 5:00 p.m.\nSaturday Clinics (Twice Monthly): 9:00 a.m. – 2:00 p.m. (By appointment only)',
+      callWGMC: 'Call WGMC'
     },
     es: {
       navGetCare: 'Obtenga atención',
@@ -78,7 +79,8 @@
       footerPhoneLabel: 'Teléfono:',
       footerAddressLabel: 'Dirección:',
       footerHoursLabel: 'Horario:',
-      footerHoursValue: 'Lunes a jueves: 9:00 a. m. – 5:00 p. m.\nClínicas de sábado (dos veces al mes): 9:00 a. m. – 2:00 p. m. (solo con cita)'
+      footerHoursValue: 'Lunes a jueves: 9:00 a. m. – 5:00 p. m.\nClínicas de sábado (dos veces al mes): 9:00 a. m. – 2:00 p. m. (solo con cita)',
+      callWGMC: 'Llamar a WGMC'
     },
     pl: {
       navGetCare: 'Uzyskaj opiekę',
@@ -117,7 +119,8 @@
       footerPhoneLabel: 'Telefon:',
       footerAddressLabel: 'Adres:',
       footerHoursLabel: 'Godziny:',
-      footerHoursValue: 'Poniedziałek–czwartek: 9:00 – 17:00\nSobotnie kliniki (dwa razy w miesiącu): 9:00 – 14:00 (tylko po wcześniejszym umówieniu)'
+      footerHoursValue: 'Poniedziałek–czwartek: 9:00 – 17:00\nSobotnie kliniki (dwa razy w miesiącu): 9:00 – 14:00 (tylko po wcześniejszym umówieniu)',
+      callWGMC: 'Zadzwoń do WGMC'
     },
     ar: {
       navGetCare: 'الحصول على الرعاية',
@@ -156,7 +159,8 @@
       footerPhoneLabel: 'الهاتف:',
       footerAddressLabel: 'العنوان:',
       footerHoursLabel: 'الساعات:',
-      footerHoursValue: 'الإثنين–الخميس: 9:00 ص – 5:00 م\nعيادات السبت (مرتان شهريًا): 9:00 ص – 2:00 م (بموعد فقط)'
+      footerHoursValue: 'الإثنين–الخميس: 9:00 ص – 5:00 م\nعيادات السبت (مرتان شهريًا): 9:00 ص – 2:00 م (بموعد فقط)',
+      callWGMC: 'اتصل بـ WGMC'
     }
   };
 
@@ -333,6 +337,20 @@
     });
 
     document.querySelectorAll('footer pre').forEach((el) => setKeyIfMissing(el, 'footerHoursValue'));
+
+    // Footer Donate dropdown button (btn-secondary inside footer)
+    document.querySelectorAll('footer button.dropdown-toggle.btn-secondary').forEach((btn) => setKeyIfMissing(btn, 'navDonate'));
+
+    // Footer "About WGMC" description paragraph (the <p> sibling right after the heading)
+    document.querySelectorAll('footer h3').forEach((h3) => {
+      if (normalizeText(h3.textContent) === 'about wgmc') {
+        const p = h3.nextElementSibling;
+        if (p && p.tagName === 'P') setKeyIfMissing(p, 'footerAboutBody');
+      }
+    });
+
+    // Non-primary, non-footer call buttons (e.g. "Call WGMC" secondary/light CTAs)
+    document.querySelectorAll('a.btn:not(.btn-primary)[href^="tel:+18157263377"]:not(footer *)').forEach((el) => setKeyIfMissing(el, 'callWGMC'));
   }
 
   window.initPage = function initPage(dict = {}, supported = defaultSupported) {
@@ -382,11 +400,15 @@
 
     function apply() {
       autoBindSharedText();
-      const layoutDir = 'ltr'; // keep layout alignment consistent across languages
+      if (lang === 'ar' && !document.getElementById('wgmc-ar-font')) {
+        const link = document.createElement('link');
+        link.id = 'wgmc-ar-font';
+        link.rel = 'stylesheet';
+        link.href = 'https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap';
+        document.head.appendChild(link);
+      }
       document.documentElement.lang = lang;
-      document.documentElement.dir = layoutDir;
       document.documentElement.setAttribute('data-lang', lang);
-      document.body?.setAttribute('dir', layoutDir);
       document.body?.setAttribute('data-lang', lang);
       localStorage.setItem('wgmc_lang', lang);
       const url = new URL(location.href);

@@ -144,28 +144,28 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
           <div class="rounded-brand bg-white shadow-card p-6 border border-slate-100">
             <div class="flex flex-col gap-3">
-              <h2 class="text-xl font-semibold text-brand-primary heading-accent">Our Mission</h2>
-              <p class="text-slate-700">WGMC seeks to promote a healthy community by:</p>
+              <h2 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="missionTitle">Our Mission</h2>
+              <p class="text-slate-700" data-i18n="missionIntro">WGMC seeks to promote a healthy community by:</p>
               <div class="grid gap-3 sm:grid-cols-2">
                 <div class="rounded-brand border border-slate-100 bg-slate-50 p-4 flex gap-3">
                   <div class="h-10 w-10 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center font-semibold">1</div>
-                  <p class="text-slate-700">Providing free healthcare services to people in Will and Grundy counties who are unable to receive care from other sources.</p>
+                  <p class="text-slate-700" data-i18n="missionPoint1">Providing free healthcare services to people in Will and Grundy counties who are unable to receive care from other sources.</p>
                 </div>
                 <div class="rounded-brand border border-slate-100 bg-slate-50 p-4 flex gap-3">
                   <div class="h-10 w-10 rounded-full bg-brand-secondary/10 text-brand-black flex items-center justify-center font-semibold">2</div>
-                  <p class="text-slate-700">Delivering these services through dedicated volunteer healthcare professionals, other volunteers, and a small paid staff in alliance with community agencies and healthcare providers.</p>
+                  <p class="text-slate-700" data-i18n="missionPoint2">Delivering these services through dedicated volunteer healthcare professionals, other volunteers, and a small paid staff in alliance with community agencies and healthcare providers.</p>
                 </div>
               </div>
               <div class="rounded-brand border border-slate-100 bg-brand-wash p-4 shadow-card">
-                <p class="text-slate-700">We accomplish this mission by providing comprehensive, free healthcare to over 1,000 patients each year who are low income and not eligible for medical entitlements. Patients have a medical home—keeping residents healthy, reducing unnecessary emergency room visits, and lowering community healthcare costs.</p>
+                <p class="text-slate-700" data-i18n="missionSummary">We accomplish this mission by providing comprehensive, free healthcare to over 1,000 patients each year who are low income and not eligible for medical entitlements. Patients have a medical home—keeping residents healthy, reducing unnecessary emergency room visits, and lowering community healthcare costs.</p>
               </div>
               <div class="mt-2">
-                <h3 class="text-lg font-semibold text-brand-primary">Services we provide</h3>
-                <p class="text-slate-700 mt-1">Volunteer clinicians, staff, and partners deliver care at no cost:</p>
+                <h3 class="text-lg font-semibold text-brand-primary" data-i18n="servicesTitle">Services we provide</h3>
+                <p class="text-slate-700 mt-1" data-i18n="servicesIntro">Volunteer clinicians, staff, and partners deliver care at no cost:</p>
                 <ul class="mt-3 flex flex-wrap gap-2">
-                  <li class="px-3 py-2 rounded-brand border border-slate-200 bg-white shadow-sm text-sm font-semibold text-slate-900">Free Primary Care</li>
-                  <li class="px-3 py-2 rounded-brand border border-slate-200 bg-white shadow-sm text-sm font-semibold text-slate-900">Specialist Care</li>
-                  <li class="px-3 py-2 rounded-brand border border-slate-200 bg-white shadow-sm text-sm font-semibold text-slate-900">No/Low-Cost Medications</li>
+                  <li class="px-3 py-2 rounded-brand border border-slate-200 bg-white shadow-sm text-sm font-semibold text-slate-900" data-i18n="servicePrimary">Free Primary Care</li>
+                  <li class="px-3 py-2 rounded-brand border border-slate-200 bg-white shadow-sm text-sm font-semibold text-slate-900" data-i18n="serviceSpecialist">Specialist Care</li>
+                  <li class="px-3 py-2 rounded-brand border border-slate-200 bg-white shadow-sm text-sm font-semibold text-slate-900" data-i18n="serviceMeds">No/Low-Cost Medications</li>
                 </ul>
               </div>
             </div>
@@ -219,9 +219,9 @@
 Saturday Clinics (Twice Monthly): 9:00 a.m. – 2:00 p.m. (By appointment only)</pre>
               </li>
             </ul>
-            <div class="mt-4 flex flex-wrap gap-3" data-dropdown>
+            <div class="mt-4 flex flex-wrap gap-3">
               <a href="https://maps.google.com/?q=213+E+Cass+St,+Joliet,+IL+60432" target="_blank" rel="noreferrer" class="btn btn-light">🗺️ Open in Maps</a>
-              <div class="relative">
+              <div class="relative" data-dropdown>
                 <button class="btn btn-secondary inline-flex items-center gap-2 dropdown-toggle" aria-haspopup="menu" aria-expanded="false">Donate <span aria-hidden>▾</span></button>
                 <div class="dropdown-panel menu-pop w-56 rounded-brand bg-white shadow-card border border-slate-200 p-2">
                   <a class="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
@@ -250,6 +250,62 @@ Saturday Clinics (Twice Monthly): 9:00 a.m. – 2:00 p.m. (By appointment only)<
   <script>
     (function(){
       const dict = {
+        en: {
+          heroTitle: 'Our Mission',
+          heroDesc: 'WGMC provides free, dignified healthcare and housing support for uninsured and underinsured adults in Will & Grundy Counties.',
+          missionTitle: 'Our Mission',
+          missionIntro: 'WGMC seeks to promote a healthy community by:',
+          missionPoint1: 'Providing free healthcare services to people in Will and Grundy counties who are unable to receive care from other sources.',
+          missionPoint2: 'Delivering these services through dedicated volunteer healthcare professionals, other volunteers, and a small paid staff in alliance with community agencies and healthcare providers.',
+          missionSummary: 'We accomplish this mission by providing comprehensive, free healthcare to over 1,000 patients each year who are low income and not eligible for medical entitlements. Patients have a medical home—keeping residents healthy, reducing unnecessary emergency room visits, and lowering community healthcare costs.',
+          servicesTitle: 'Services we provide',
+          servicesIntro: 'Volunteer clinicians, staff, and partners deliver care at no cost:',
+          servicePrimary: 'Free Primary Care',
+          serviceSpecialist: 'Specialist Care',
+          serviceMeds: 'No/Low-Cost Medications'
+        },
+        es: {
+          heroTitle: 'Nuestra Misión',
+          heroDesc: 'WGMC ofrece atención médica gratuita y digna, así como apoyo de vivienda para adultos sin seguro o con seguro insuficiente en los condados de Will y Grundy.',
+          missionTitle: 'Nuestra Misión',
+          missionIntro: 'WGMC busca promover una comunidad saludable al:',
+          missionPoint1: 'Brindar servicios de atención médica gratuita a personas en los condados de Will y Grundy que no pueden recibir atención de otras fuentes.',
+          missionPoint2: 'Prestar estos servicios a través de profesionales de la salud voluntarios, otros voluntarios y un pequeño equipo remunerado en alianza con agencias comunitarias y proveedores de salud.',
+          missionSummary: 'Cumplimos esta misión brindando atención médica integral y gratuita a más de 1,000 pacientes cada año que tienen bajos ingresos y no son elegibles para beneficios médicos. Los pacientes tienen un hogar médico que mantiene a los residentes saludables, reduce las visitas innecesarias a urgencias y disminuye los costos de atención médica en la comunidad.',
+          servicesTitle: 'Servicios que ofrecemos',
+          servicesIntro: 'Médicos voluntarios, personal y socios brindan atención sin costo:',
+          servicePrimary: 'Atención Primaria Gratuita',
+          serviceSpecialist: 'Atención Especializada',
+          serviceMeds: 'Medicamentos Sin Costo o a Bajo Costo'
+        },
+        pl: {
+          heroTitle: 'Nasza Misja',
+          heroDesc: 'WGMC zapewnia bezpłatną, godną opiekę zdrowotną i wsparcie mieszkaniowe dla nieubezpieczonych i niedoubezpieczonych dorosłych w hrabstwach Will i Grundy.',
+          missionTitle: 'Nasza Misja',
+          missionIntro: 'WGMC dąży do promowania zdrowej społeczności poprzez:',
+          missionPoint1: 'Świadczenie bezpłatnych usług opieki zdrowotnej dla mieszkańców hrabstw Will i Grundy, którzy nie mają dostępu do opieki z innych źródeł.',
+          missionPoint2: 'Dostarczanie tych usług przez zaangażowanych wolontariuszy w dziedzinie ochrony zdrowia, innych wolontariuszy i niewielki płatny personel we współpracy z agencjami społecznymi i świadczeniodawcami opieki zdrowotnej.',
+          missionSummary: 'Realizujemy tę misję, zapewniając kompleksową, bezpłatną opiekę zdrowotną ponad 1 000 pacjentom rocznie, którzy mają niskie dochody i nie kwalifikują się do świadczeń medycznych. Pacjenci mają stałą przychodnię, co pomaga utrzymać zdrowie mieszkańców, zmniejsza zbędne wizyty na oddziale ratunkowym i obniża koszty opieki zdrowotnej w społeczności.',
+          servicesTitle: 'Świadczone usługi',
+          servicesIntro: 'Wolontariusze kliniczni, personel i partnerzy świadczą opiekę bezpłatnie:',
+          servicePrimary: 'Bezpłatna Podstawowa Opieka Zdrowotna',
+          serviceSpecialist: 'Opieka Specjalistyczna',
+          serviceMeds: 'Bezpłatne lub Tanie Leki'
+        },
+        ar: {
+          heroTitle: 'مهمتنا',
+          heroDesc: 'توفر WGMC رعاية صحية مجانية وكريمة ودعمًا للسكن للبالغين غير المؤمن عليهم أو غير المؤمن عليهم بشكل كافٍ في مقاطعتي ويل وجرندي.',
+          missionTitle: 'مهمتنا',
+          missionIntro: 'تسعى WGMC إلى تعزيز مجتمع صحي من خلال:',
+          missionPoint1: 'تقديم خدمات رعاية صحية مجانية للأشخاص في مقاطعتي ويل وجرندي الذين لا يستطيعون الحصول على رعاية من مصادر أخرى.',
+          missionPoint2: 'تقديم هذه الخدمات من خلال متطوعين متخصصين في الرعاية الصحية ومتطوعين آخرين وطاقم عمل صغير مدفوع الأجر بالتعاون مع وكالات مجتمعية ومقدمي خدمات الرعاية الصحية.',
+          missionSummary: 'نحقق هذه المهمة من خلال تقديم رعاية صحية شاملة ومجانية لأكثر من 1,000 مريض سنويًا ممن يعانون من انخفاض الدخل ولا يستوفون شروط الاستحقاق الطبي. يمتلك المرضى منزلًا طبيًا يبقي السكان بصحة جيدة، ويقلل من الزيارات غير الضرورية لغرف الطوارئ، ويخفض تكاليف الرعاية الصحية في المجتمع.',
+          servicesTitle: 'الخدمات التي نقدمها',
+          servicesIntro: 'يقدم الأطباء المتطوعون والموظفون والشركاء الرعاية مجانًا:',
+          servicePrimary: 'رعاية أولية مجانية',
+          serviceSpecialist: 'رعاية متخصصة',
+          serviceMeds: 'أدوية مجانية أو منخفضة التكلفة'
+        }
       };
       initPage(dict);
       document.getElementById('year').textContent = new Date().getFullYear();

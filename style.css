@@ -213,15 +213,22 @@ nav[aria-label="Main"] .menu-pop a {
   }
 }
 
-/* RTL helpers */
-body[dir="rtl"] {
+/* Arabic — keep page layout LTR; only flip text direction on content elements */
+html[data-lang="ar"],
+html[data-lang="ar"] body {
+  font-family: "Noto Sans Arabic", "Geeza Pro", "Arial Unicode MS", system-ui, sans-serif;
+}
+/* Apply RTL direction and right-alignment to block text content only.
+   Flex/grid layout containers are intentionally excluded so the page structure does not mirror. */
+html[data-lang="ar"] :is(h1, h2, h3, h4, h5, h6, p, li, dt, dd, blockquote, figcaption, pre, caption) {
   direction: rtl;
   text-align: right;
 }
-body[dir="rtl"] .heading-accent::after { left: auto; right: 0; }
-body[dir="rtl"] .brand-divider { margin-left: 0; margin-right: auto; }
-body[dir="rtl"] .lang-select-wrapper { flex-direction: row-reverse; padding-left: 0.65rem; padding-right: 0.65rem; }
-body[dir="rtl"] .lang-select { text-align: right; }
+/* Heading underline accent shifts to the right side */
+html[data-lang="ar"] .heading-accent::after { left: auto; right: 0; }
+/* Language selector: drop-down arrow moves to the left side */
+html[data-lang="ar"] .lang-select-wrapper { flex-direction: row-reverse; padding-left: 0.65rem; padding-right: 0.65rem; }
+html[data-lang="ar"] .lang-select { text-align: right; }
 
 /* Language dropdown */
 .lang-select-wrapper {
@@ -265,11 +272,11 @@ body[dir="rtl"] .lang-select { text-align: right; }
   color: #0f172a;
   font-size: 0.95rem;
 }
-body[dir="rtl"] .lang-select {
+html[data-lang="ar"] .lang-select {
   padding-left: 2.35rem;
   padding-right: 0.5rem;
 }
-body[dir="rtl"] .lang-select option { text-align: right; }
+html[data-lang="ar"] .lang-select option { text-align: right; }
 .lang-select-arrow {
   position: absolute;
   right: 0.35rem;
@@ -286,7 +293,7 @@ body[dir="rtl"] .lang-select option { text-align: right; }
   pointer-events: none;
   transform: translateY(-50%);
 }
-body[dir="rtl"] .lang-select-arrow { right: auto; left: 0.35rem; }
+html[data-lang="ar"] .lang-select-arrow { right: auto; left: 0.35rem; }
 .lang-select-arrow svg {
   display: block;
 }
