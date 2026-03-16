@@ -443,7 +443,7 @@ html[data-lang="ar"] .lang-select-arrow { right: auto; left: 0.35rem; }
   .chatbot-toggle {
     right: 0.75rem;
     top: auto;
-    bottom: 0.75rem;
+    bottom: 5.5rem;
     transform: none;
   }
 }
