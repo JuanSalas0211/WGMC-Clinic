@@ -605,7 +605,8 @@
         ];
         const involvedItems = [
           { label: t.becomeVolunteer, href: `become-a-volunteer.html?lang=${lang}` },
-          { label: t.partnerReferrals, href: `partner-referrals.html?lang=${lang}` }
+          { label: t.partnerReferrals, href: `partner-referrals.html?lang=${lang}` },
+          { label: 'Social Media', href: `social-media.html?lang=${lang}` }
         ];
         const donationMenuItems = donationLinks.map((d) => ({ ...d, label: d.key === 'general' ? t.generalDonation : d.key === 'sponsor' ? t.sponsorPatient : t.brickByBrick }));
         const openProg = (focusFirst = false) => {
@@ -716,7 +717,7 @@
                   <div className={`absolute left-1/2 top-full mt-3 -translate-x-1/2 transform z-20 ${involvedOpen ? '' : 'pointer-events-none'}`} style={{ pointerEvents: involvedOpen ? 'auto' : 'none' }}>
                     <div className={`menu-pop w-64 rounded-brand bg-white shadow-card border border-slate-200 p-2 ${involvedOpen ? 'open' : ''}`}>
                       {involvedItems.map((item) => (
-                        <a key={item.href} className="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href={item.href} onClick={() => setInvolvedOpen(false)}>
+                        <a key={item.href} className="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary" href={item.href} onClick={() => setInvolvedOpen(false)} {...(item.external ? { target: '_blank', rel: 'noreferrer' } : {})}>
                           {item.label}
                         </a>
                       ))}
@@ -835,7 +836,7 @@
                   {mobileInvolvedOpen && (
                     <div id="mobile-involved" className="pl-3 grid gap-1 text-slate-700">
                       {involvedItems.map((item) => (
-                        <a key={item.href} onClick={() => setOpen(false)} className="py-1" href={item.href}>{item.label}</a>
+                        <a key={item.href} onClick={() => setOpen(false)} className="py-1" href={item.href} {...(item.external ? { target: '_blank', rel: 'noreferrer' } : {})}>{item.label}</a>
                       ))}
                     </div>
                   )}
@@ -1337,6 +1338,7 @@
                     <li><a className="hover:underline" href={`patients.html?lang=${lang}`}>{t.forPatients}</a></li>
                     <li><a className="hover:underline" href={`become-a-volunteer.html?lang=${lang}`}>{t.becomeVolunteer}</a></li>
                     <li><a className="hover:underline" href={`partner-referrals.html?lang=${lang}`}>{t.partnerReferrals}</a></li>
+                    <li><a className="hover:underline" href={`social-media.html?lang=${lang}`}>Social Media</a></li>
                     <li><a className="hover:underline" href="#support">{t.support}</a></li>
                   </ul>
                 </div>
@@ -1409,37 +1411,6 @@
         );
       }
 
-      function GalaBanner({ t }) {
-        return (
-          <section className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-            <Reveal className="rounded-brand bg-white shadow-card border border-slate-100 overflow-hidden">
-              <div className="flex flex-col md:flex-row items-center gap-6 p-6 md:p-8">
-                <img
-                  src="images/38th-annual-celebration.png"
-                  alt="38th Annual Celebration flyer"
-                  className="w-full md:w-72 rounded-brand object-contain flex-shrink-0"
-                  loading="lazy"
-                />
-                <div className="flex-1 text-center md:text-left">
-                  <div className="inline-block bg-brand-secondary/20 text-brand-primary text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Annual Event</div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-brand-primary">{t.galaTitle}</h2>
-                  <p className="mt-3 text-slate-700 leading-relaxed">{t.galaDesc}</p>
-                  <a
-                    href="https://www.paypal.com/ncp/payment/5HYFC7FMES4EJ"
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={() => window.analytics.track('gala_donate_click')}
-                    className="mt-5 btn btn-primary inline-flex"
-                  >
-                    {t.galaCta}
-                  </a>
-                </div>
-              </div>
-            </Reveal>
-          </section>
-        );
-      }
-
       function App() {
         const [lang, setLang] = useLang();
         const t = i18n[lang];
@@ -1453,7 +1424,6 @@
             <Header t={t} lang={lang} onToggleLang={setLang} />
             <main id="main" className="pb-24 sm:pb-0">
               <Hero t={t} />
-              <GalaBanner t={t} />
               <Metrics t={t} />
               <Programs t={t} lang={lang} />
               <GetCare t={t} />

@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>WGMC — Housing, Healthcare, and Hope (HHH)</title>
+    <title>WGMC — Connect With Us</title>
     <meta name="theme-color" content="#319FCA" />
-    <meta name="description" content="The HHH program bridges housing and healthcare for community members experiencing homelessness or housing insecurity." />
+    <meta name="description" content="Follow Will-Grundy Medical Clinic on Facebook and LinkedIn. Stay connected for health updates, program news, and community events." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -16,10 +16,22 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .hero { background-image: radial-gradient(circle at 10% 20%, rgba(var(--brand-primary-rgb), 0.12), transparent 35%), radial-gradient(circle at 80% 10%, rgba(var(--brand-secondary-rgb), 0.12), transparent 30%), linear-gradient(135deg, #ffffffee, rgba(var(--brand-secondary-rgb), 0.25)); }
+      .hero {
+        background-image:
+          radial-gradient(circle at 10% 20%, rgba(var(--brand-primary-rgb), 0.12), transparent 35%),
+          radial-gradient(circle at 80% 10%, rgba(var(--brand-secondary-rgb), 0.12), transparent 30%),
+          linear-gradient(135deg, #ffffffee, rgba(var(--brand-secondary-rgb), 0.25));
+      }
+      .social-card { transition: transform .18s ease, box-shadow .18s ease; }
+      .social-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,.10); }
+      .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+      .reveal.revealed { opacity: 1; transform: translateY(0); }
     </style>
   </head>
   <body class="bg-white text-text font-sans">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ── HEADER ──────────────────────────────────────────── -->
     <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200" data-site-nav>
       <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between" aria-label="Main">
         <a data-lang-href="index.html#home" class="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary rounded-md">
@@ -89,12 +101,12 @@
           <a href="tel:+18157263377" class="hidden sm:inline-flex btn btn-primary" data-i18n="ctaCall"><span>📞</span> Call (815) 726-3377</a>
         </div>
       </nav>
+      <!-- Mobile menu -->
       <div class="md:hidden border-t border-slate-200 bg-white hidden" data-mobile-menu>
         <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm font-semibold">
           <a data-lang-href="patients.html" class="py-2" data-i18n="navGetCare">Get Care</a>
           <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="programs" aria-expanded="false">
-            <span data-i18n="navPrograms">Programs</span>
-            <span aria-hidden>▾</span>
+            <span data-i18n="navPrograms">Programs</span><span aria-hidden>▾</span>
           </button>
           <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="programs">
             <a data-lang-href="program-health-care-services.html" class="py-1">Healthcare Services</a>
@@ -102,8 +114,7 @@
             <a data-lang-href="program-community-research-data.html" class="py-1">Center to Advance Human Belonging (CAHB)</a>
           </div>
           <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="about" aria-expanded="false">
-            <span>About Us</span>
-            <span aria-hidden>▾</span>
+            <span>About Us</span><span aria-hidden>▾</span>
           </button>
           <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="about">
             <a data-lang-href="our-mission.html" class="py-1">Our Mission</a>
@@ -113,8 +124,7 @@
             <a data-lang-href="our-board-of-directors.html" class="py-1">Our Board of Directors</a>
           </div>
           <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="involved" aria-expanded="false">
-            <span>Get Involved</span>
-            <span aria-hidden>▾</span>
+            <span>Get Involved</span><span aria-hidden>▾</span>
           </button>
           <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="involved">
             <a data-lang-href="become-a-volunteer.html" class="py-1">Become a Volunteer</a>
@@ -122,8 +132,7 @@
             <a data-lang-href="social-media.html" class="py-1">Social Media</a>
           </div>
           <button class="py-3 text-left flex items-center justify-between" data-mobile-accordion="donate" aria-expanded="false">
-            <span data-i18n="navDonate">Donate</span>
-            <span aria-hidden>▾</span>
+            <span data-i18n="navDonate">Donate</span><span aria-hidden>▾</span>
           </button>
           <div class="pl-3 grid gap-1 text-slate-700 hidden" data-mobile-panel="donate">
             <a class="py-1" href="https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ" target="_blank" rel="noreferrer">General Donation</a>
@@ -134,68 +143,160 @@
       </div>
     </header>
 
-    <main>
+    <!-- ── MAIN ────────────────────────────────────────────── -->
+    <main id="main">
+
+      <!-- Hero -->
       <section class="hero">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-          <h1 class="text-3xl sm:text-4xl font-bold text-brand-primary heading-accent" data-i18n="heroTitle">Housing, Healthcare, and Hope (HHH)</h1>
-          <p class="mt-3 text-lg text-slate-700 max-w-3xl" data-i18n="heroDesc">The HHH program bridges housing and healthcare for community members experiencing homelessness or housing insecurity.</p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="tel:+18157263377" class="btn btn-primary" data-i18n="callHelp">Call WGMC</a>
-          </div>
+          <h1 class="text-3xl sm:text-4xl font-bold text-brand-primary heading-accent">Connect With Us</h1>
+          <p class="mt-3 text-lg text-slate-700 max-w-3xl">Stay connected with Will-Grundy Medical Clinic — follow us on social media for health tips, program updates, community events, and clinic news.</p>
         </div>
       </section>
 
+      <!-- Content -->
       <section>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-6">
-          <div class="bg-white rounded-brand shadow-card p-6 border border-slate-100">
-            <h2 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="hhhOverviewTitle">Overview</h2>
-            <p class="mt-3 text-slate-700" data-i18n="hhhOverviewBody1">The HHH program bridges housing and healthcare for our community members who are experiencing homelessness or are housing insecure. Program participants are provided with services focused on obtaining stable housing and healthcare, including the provision of basic needs, shelter referrals, case management, care coordination, tenant-based rental assistance, and medical respite.</p>
-            <p class="mt-3 text-slate-700" data-i18n="hhhOverviewBody2">Our team meets people where they are, coordinates healthcare and housing supports, and walks alongside participants through stabilization.</p>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-8">
+
+          <!-- Social Media Links -->
+          <div class="reveal rounded-brand bg-white shadow-card p-6 border border-slate-100">
+            <h2 class="text-xl font-semibold text-brand-primary heading-accent mb-6">Follow Us</h2>
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/WGMedClinic/" target="_blank" rel="noreferrer"
+                 class="social-card flex items-center gap-5 rounded-brand border border-slate-200 bg-slate-50 p-5 focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">
+                <div class="flex-shrink-0 h-14 w-14 rounded-brand flex items-center justify-center" style="background:#1877F2;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                  </svg>
+                </div>
+                <div class="min-w-0">
+                  <p class="font-bold text-slate-900 text-lg leading-tight">Facebook</p>
+                  <p class="text-sm text-slate-600 mt-0.5">@WGMedClinic</p>
+                  <p class="text-sm text-slate-500 mt-1">Updates, events &amp; community announcements</p>
+                </div>
+                <svg class="ml-auto flex-shrink-0 text-brand-primary" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/company/will-grundy-medical-clinic-inc/" target="_blank" rel="noreferrer"
+                 class="social-card flex items-center gap-5 rounded-brand border border-slate-200 bg-slate-50 p-5 focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary">
+                <div class="flex-shrink-0 h-14 w-14 rounded-brand flex items-center justify-center" style="background:#0A66C2;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </div>
+                <div class="min-w-0">
+                  <p class="font-bold text-slate-900 text-lg leading-tight">LinkedIn</p>
+                  <p class="text-sm text-slate-600 mt-0.5">Will-Grundy Medical Clinic, Inc.</p>
+                  <p class="text-sm text-slate-500 mt-1">News, career opportunities &amp; professional updates</p>
+                </div>
+                <svg class="ml-auto flex-shrink-0 text-brand-primary" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+
+            </div>
           </div>
-          <div class="grid md:grid-cols-3 gap-6">
+
+          <!-- Why Follow Us -->
+          <div class="reveal rounded-brand bg-white shadow-card p-6 border border-slate-100">
+            <h2 class="text-xl font-semibold text-brand-primary heading-accent mb-6">Why Follow WGMC?</h2>
+            <div class="mt-6 grid gap-4 md:grid-cols-3">
+              <div class="rounded-brand border border-slate-100 bg-slate-50 p-5">
+                <div class="h-10 w-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(var(--brand-primary-rgb),0.1);">
+                  <svg class="text-brand-primary" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5 19.79 19.79 0 01.05 4.71 2 2 0 012 2.5h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 10.5a16 16 0 006.59 6.59l1.36-1.35a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-brand-primary">Health Tips &amp; Resources</h3>
+                <p class="mt-2 text-sm text-slate-700 leading-relaxed">Get timely health information, wellness tips, and resources relevant to our community in Will &amp; Grundy Counties.</p>
+              </div>
+              <div class="rounded-brand border border-slate-100 bg-slate-50 p-5">
+                <div class="h-10 w-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(var(--brand-primary-rgb),0.1);">
+                  <svg class="text-brand-primary" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-brand-primary">Events &amp; Clinic News</h3>
+                <p class="mt-2 text-sm text-slate-700 leading-relaxed">Stay informed about upcoming clinic events, Saturday sessions, community outreach, and program announcements.</p>
+              </div>
+              <div class="rounded-brand border border-slate-100 bg-slate-50 p-5">
+                <div class="h-10 w-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(var(--brand-primary-rgb),0.1);">
+                  <svg class="text-brand-primary" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-brand-primary">Volunteer Opportunities</h3>
+                <p class="mt-2 text-sm text-slate-700 leading-relaxed">Learn how you can give back — from volunteering your time to supporting our Medical Respite Program and other initiatives.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Respite Program Highlight -->
+          <div class="reveal rounded-brand p-6 border border-slate-100 overflow-hidden relative" style="background:linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%); color:#fff;">
+            <div class="absolute -top-8 -right-8 w-40 h-40 rounded-full pointer-events-none" style="background:rgba(255,255,255,0.07);"></div>
+            <div class="relative">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-3" style="background:rgba(255,255,255,0.18); border:1px solid rgba(255,255,255,0.3);">Featured Program</span>
+              <h2 class="text-2xl font-bold mb-2">Medical Respite Program</h2>
+              <p class="text-sm leading-relaxed max-w-xl" style="color:rgba(255,255,255,0.85);">Short-term post-acute care for individuals experiencing homelessness or unstable housing — a safe space to recover from illness, injury, or surgery with personalized care plans and daily support.</p>
+              <div class="mt-5 flex flex-wrap gap-3">
+                <a href="mailto:respite@wgmedclinic.org" class="btn btn-light text-sm">✉️ respite@wgmedclinic.org</a>
+                <a href="tel:+18156418902" class="btn text-sm" style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3);">📞 (815) 641-8902</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Clinic Hours & Contact -->
+          <div class="reveal grid gap-6 md:grid-cols-2">
+
+            <!-- Hours -->
             <div class="rounded-brand bg-white shadow-card p-6 border border-slate-100">
-              <h3 class="font-semibold text-lg" data-i18n="hhhStreetTitle">Street Outreach</h3>
-              <p class="mt-3 text-slate-700 text-sm" data-i18n="hhhStreetBody">Connecting with individuals in the community to address urgent needs, offer basic supplies, and link people to healthcare, housing support, and case management.</p>
+              <h2 class="text-xl font-semibold text-brand-primary heading-accent mb-5">Clinic Hours</h2>
+              <ul class="mt-5 space-y-2 text-sm text-slate-700">
+                <li class="flex justify-between border-b border-slate-100 pb-2"><span class="font-medium text-slate-600">Monday</span><span class="font-semibold">8:30 AM – 5:00 PM</span></li>
+                <li class="flex justify-between border-b border-slate-100 pb-2"><span class="font-medium text-slate-600">Tuesday</span><span class="font-semibold">8:30 AM – 5:00 PM</span></li>
+                <li class="flex justify-between border-b border-slate-100 pb-2"><span class="font-medium text-slate-600">Wednesday</span><span class="font-semibold">8:30 AM – 8:00 PM</span></li>
+                <li class="flex justify-between border-b border-slate-100 pb-2"><span class="font-medium text-slate-600">Thursday</span><span class="font-semibold">8:30 AM – 5:00 PM</span></li>
+                <li class="flex justify-between border-b border-slate-100 pb-2"><span class="font-medium text-slate-600">Friday</span><span class="font-semibold">8:30 AM – 5:00 PM</span></li>
+                <li class="flex justify-between border-b border-slate-100 pb-2"><span class="font-medium text-slate-600">Saturday*</span><span class="font-semibold">9:00 AM – 2:00 PM</span></li>
+              </ul>
+              <p class="mt-3 text-xs text-slate-500 italic">* Two Saturdays per month — call for availability. Pharmacy: Tuesday 10:00 AM – 12:00 PM.</p>
             </div>
+
+            <!-- Contact -->
             <div class="rounded-brand bg-white shadow-card p-6 border border-slate-100">
-              <h3 class="font-semibold text-lg" data-i18n="hhhRentalTitle">Tenant-Based Rental Assistance</h3>
-              <p class="mt-3 text-slate-700 text-sm" data-i18n="hhhRentalBody">Helping participants secure and maintain housing through rental assistance, care coordination, and ongoing support to remain stably housed.</p>
+              <h2 class="text-xl font-semibold text-brand-primary heading-accent mb-5">Contact &amp; Location</h2>
+              <ul class="mt-5 space-y-4 text-sm text-slate-700">
+                <li class="flex items-start gap-3">
+                  <svg class="flex-shrink-0 mt-0.5 text-brand-primary" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>215 E. Cass Street, Joliet, IL 60452</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg class="flex-shrink-0 text-brand-primary" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5 19.79 19.79 0 01.05 4.71 2 2 0 012 2.5h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 10.5a16 16 0 006.59 6.59l1.36-1.35a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                  <a href="tel:+18157263377" class="hover:text-brand-primary font-medium">(815) 726-3377</a>
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg class="flex-shrink-0 text-brand-primary" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:respite@wgmedclinic.org" class="hover:text-brand-primary font-medium">respite@wgmedclinic.org</a>
+                </li>
+              </ul>
+              <div class="mt-5 flex flex-wrap gap-3">
+                <a href="https://maps.google.com/?q=215+E+Cass+St,+Joliet,+IL+60452" target="_blank" rel="noreferrer" class="btn btn-light text-sm">🗺️ Open in Maps</a>
+                <a href="tel:+18157263377" class="btn btn-primary text-sm">📞 Call Us</a>
+              </div>
             </div>
-            <div class="rounded-brand bg-white shadow-card p-6 border border-slate-100">
-              <h3 class="font-semibold text-lg" data-i18n="hhhRespiteTitle">Medical Respite</h3>
-              <p class="mt-3 text-slate-700 text-sm" data-i18n="hhhRespiteBody">Short-term, home-like stays with coordinated care for individuals who need a safe place to recover while connecting to housing and healthcare resources.</p>
-              <a href="images/wgmc%20respite%20brochure%20v2-2.pdf" class="btn btn-light mt-4 inline-flex w-fit" target="_blank" rel="noreferrer" data-i18n="hhhRespiteLearnMore">Learn more</a>
-            </div>
+
           </div>
-          <div class="rounded-brand bg-brand-wash p-6 border border-slate-100 shadow-card">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <h3 class="text-xl font-semibold text-brand-primary" data-i18n="hhhCtaTitle">If you or someone you know needs housing support</h3>
-                <p class="text-slate-700 mt-1" data-i18n="hhhCtaBody">Call to speak with our HHH team about housing, case management, and medical respite options.</p>
-              </div>
-              <div class="flex flex-wrap gap-3">
-                <a href="tel:+18157263377" class="btn btn-primary" data-i18n="ctaCall">📞 Call (815) 726-3377</a>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white rounded-brand shadow-card p-6 border border-slate-100">
-            <h3 class="text-xl font-semibold text-brand-primary heading-accent" data-i18n="hhhContactTitle">Contact the HHH Team</h3>
-            <div class="mt-4 grid md:grid-cols-3 gap-6 text-sm text-slate-700">
-              <div>
-                <div class="font-semibold" data-i18n="hhhContactPrimary">Contact HHH</div>
-                <a href="tel:+18156418902" class="text-brand-primary hover:underline">(815) 641‑8902</a>
-              </div>
-              <div>
-                <div class="font-semibold" data-i18n="hhhContactRespite">Medical respite coordination</div>
-                <a href="tel:+13123882429" class="text-brand-primary hover:underline">(312) 388‑2429</a>
-              </div>
-            </div>
-            <div class="mt-4 text-xs text-slate-600" data-i18n="hhhVisitUs">Visit us: 213 E. Cass Street, Joliet, IL 60432</div>
-          </div>
+
         </div>
       </section>
     </main>
 
+    <!-- ── FOOTER ──────────────────────────────────────────── -->
     <footer class="mt-12 bg-brand-secondary text-brand-black" aria-labelledby="footer-heading">
       <div class="h-1 bg-gradient-to-r from-brand-primary to-brand-secondary" aria-hidden="true"></div>
       <h2 id="footer-heading" class="sr-only">Footer</h2>
@@ -207,7 +308,7 @@
               <span class="font-semibold">WGMC</span>
             </div>
             <h3 class="mt-5 font-semibold">About WGMC</h3>
-            <p class="mt-2 text-black/80 text-sm leading-6">WGMC is a free care organization providing healthcare and social services in Will & Grundy Counties. Free medical and behavioral healthcare is provided to uninsured and underinsured adults, and free housing support and case management is provided to residents who are homeless or housing insecure.</p>
+            <p class="mt-2 text-black/80 text-sm leading-6">WGMC is a free care organization providing healthcare and social services in Will &amp; Grundy Counties. Free medical and behavioral healthcare is provided to uninsured and underinsured adults, and free housing support and case management is provided to residents who are homeless or housing insecure.</p>
             <div class="mt-5 flex flex-wrap gap-3">
               <a href="tel:+18157263377" class="btn btn-light">📞 Call (815) 726-3377</a>
               <a data-lang-href="patients.html" class="btn btn-outline bg-white/10">Patient Information</a>
@@ -216,7 +317,7 @@
               <a href="https://www.facebook.com/WGMedClinic/" target="_blank" rel="noreferrer" aria-label="WGMC on Facebook" class="text-black/60 hover:text-brand-primary transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
               </a>
-              <a href="https://www.linkedin.com/company/will-grundy-medical-clinic-inc" target="_blank" rel="noreferrer" aria-label="WGMC on LinkedIn" class="text-black/60 hover:text-brand-primary transition-colors">
+              <a href="https://www.linkedin.com/company/will-grundy-medical-clinic-inc/" target="_blank" rel="noreferrer" aria-label="WGMC on LinkedIn" class="text-black/60 hover:text-brand-primary transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               </a>
             </div>
@@ -276,123 +377,21 @@ Saturday Clinics (Twice Monthly): 9:00 a.m. – 2:00 p.m. (By appointment only)<
         </div>
       </div>
     </footer>
+
   </body>
   <script src="site-shell.js"></script>
   <script>
-    (function(){
-      const dict = {
-        en: {
-          navGetCare: 'Get Care',
-          navPrograms: 'Programs',
-          navDonate: 'Donate',
-          ctaCall: 'Call (815) 726-3377',
-          heroTitle: 'Housing, Healthcare, and Hope (HHH)',
-          heroDesc: 'The HHH program bridges housing and healthcare for community members experiencing homelessness or housing insecurity.',
-          callHelp: 'Call WGMC',
-          patientInfo: 'Patient Information',
-          hhhOverviewTitle: 'Overview',
-          hhhOverviewBody1: 'The HHH program bridges housing and healthcare for our community members who are experiencing homelessness or are housing insecure. Program participants are provided with services focused on obtaining stable housing and healthcare, including the provision of basic needs, shelter referrals, case management, care coordination, tenant-based rental assistance, and medical respite.',
-          hhhOverviewBody2: 'Our team meets people where they are, coordinates healthcare and housing supports, and walks alongside participants through stabilization.',
-          hhhStreetTitle: 'Street Outreach',
-          hhhStreetBody: 'Connecting with individuals in the community to address urgent needs, offer basic supplies, and link people to healthcare, housing support, and case management.',
-          hhhRentalTitle: 'Tenant-Based Rental Assistance',
-          hhhRentalBody: 'Helping participants secure and maintain housing through rental assistance, care coordination, and ongoing support to remain stably housed.',
-          hhhRespiteTitle: 'Medical Respite',
-          hhhRespiteBody: 'Short-term, home-like stays with coordinated care for individuals who need a safe place to recover while connecting to housing and healthcare resources.',
-          hhhRespiteLearnMore: 'Learn more',
-          hhhCtaTitle: 'If you or someone you know needs housing support',
-          hhhCtaBody: 'Call to speak with our HHH team about housing, case management, and medical respite options.',
-          hhhContactTitle: 'Contact the HHH Team',
-          hhhContactPrimary: 'Contact HHH',
-          hhhContactRespite: 'Medical respite coordination',
-          hhhContactSupport: 'Program support',
-          hhhVisitUs: 'Visit us: 213 E. Cass Street, Joliet, IL 60432'
-        },
-        es: {
-          navGetCare: 'Obtenga Atención',
-          navPrograms: 'Programas',
-          navDonate: 'Donar',
-          ctaCall: 'Llamar (815) 726-3377',
-          heroTitle: 'Vivienda, atención médica y esperanza (HHH)',
-          heroDesc: 'El programa HHH conecta la vivienda y la atención médica para miembros de la comunidad que experimentan falta de vivienda o inseguridad de vivienda.',
-          callHelp: 'Llamar a WGMC',
-          patientInfo: 'Información para pacientes',
-          hhhOverviewTitle: 'Descripción general',
-          hhhOverviewBody1: 'El programa HHH conecta la vivienda y la atención médica para nuestros miembros de la comunidad que experimentan falta de vivienda o inseguridad de vivienda. Los participantes reciben servicios enfocados en obtener vivienda y atención médica estables, incluida la provisión de necesidades básicas, derivaciones a refugios, gestión de casos, coordinación de atención, asistencia de alquiler basada en el inquilino y respiro médico.',
-          hhhOverviewBody2: 'Nuestro equipo se reúne con las personas donde se encuentran, coordina el apoyo de atención médica y vivienda, y acompaña a los participantes durante la estabilización.',
-          hhhStreetTitle: 'Alcance en la calle',
-          hhhStreetBody: 'Conectar con personas en la comunidad para abordar necesidades urgentes, ofrecer suministros básicos y vincular a las personas con atención médica, apoyo de vivienda y gestión de casos.',
-          hhhRentalTitle: 'Asistencia de alquiler basada en el inquilino',
-          hhhRentalBody: 'Ayudar a los participantes a asegurar y mantener vivienda mediante asistencia de alquiler, coordinación de atención y apoyo continuo para permanecer en vivienda estable.',
-          hhhRespiteTitle: 'Respiro médico',
-          hhhRespiteBody: 'Estancias a corto plazo similares a un hogar con atención coordinada para personas que necesitan un lugar seguro para recuperarse mientras se conectan con recursos de vivienda y atención médica.',
-          hhhRespiteLearnMore: 'Más información',
-          hhhCtaTitle: 'Si usted o alguien que conoce necesita apoyo de vivienda',
-          hhhCtaBody: 'Llame para hablar con nuestro equipo HHH sobre opciones de vivienda, gestión de casos y respiro médico.',
-          hhhContactTitle: 'Comuníquese con el equipo HHH',
-          hhhContactPrimary: 'Línea principal de HHH',
-          hhhContactRespite: 'Coordinación de respiro médico',
-          hhhContactSupport: 'Apoyo del programa',
-          hhhVisitUs: 'Visítenos: 213 E. Cass Street, Joliet, IL 60432'
-        },
-        pl: {
-          navGetCare: 'Uzyskaj opiekę',
-          navPrograms: 'Programy',
-          navDonate: 'Przekaż darowiznę',
-          ctaCall: 'Zadzwoń (815) 726-3377',
-          heroTitle: 'Mieszkalnictwo, opieka zdrowotna i nadzieja (HHH)',
-          heroDesc: 'Program HHH łączy mieszkalnictwo i opiekę zdrowotną dla osób doświadczających bezdomności lub braku stabilnego mieszkania.',
-          callHelp: 'Zadzwoń do WGMC',
-          patientInfo: 'Informacje dla pacjentów',
-          hhhOverviewTitle: 'Opis',
-          hhhOverviewBody1: 'Program HHH łączy mieszkalnictwo i opiekę zdrowotną dla członków społeczności doświadczających bezdomności lub braku stabilnego mieszkania. Uczestnicy otrzymują wsparcie w uzyskaniu stabilnego mieszkania i opieki zdrowotnej, w tym podstawowe potrzeby, skierowania do schronisk, zarządzanie sprawami, koordynację opieki, pomoc czynszową opartą na najemcy oraz opiekę wytchnieniową.',
-          hhhOverviewBody2: 'Nasz zespół spotyka ludzi tam, gdzie są, koordynuje wsparcie mieszkaniowe i zdrowotne oraz towarzyszy uczestnikom w procesie stabilizacji.',
-          hhhStreetTitle: 'Outreach uliczny',
-          hhhStreetBody: 'Nawiązywanie kontaktu z osobami w społeczności, aby zaspokoić pilne potrzeby, oferować podstawowe artykuły i łączyć z opieką zdrowotną, wsparciem mieszkaniowym i zarządzaniem sprawami.',
-          hhhRentalTitle: 'Pomoc czynszowa oparta na najemcy',
-          hhhRentalBody: 'Pomagamy uczestnikom zabezpieczyć i utrzymać mieszkanie poprzez pomoc w opłacaniu czynszu, koordynację opieki i stałe wsparcie, aby utrzymać stabilne mieszkanie.',
-          hhhRespiteTitle: 'Opieka wytchnieniowa medyczna',
-          hhhRespiteBody: 'Krótkoterminowe, domowe pobyty z koordynowaną opieką dla osób, które potrzebują bezpiecznego miejsca do rekonwalescencji, łącząc się z zasobami mieszkaniowymi i zdrowotnymi.',
-          hhhRespiteLearnMore: 'Dowiedz się więcej',
-          hhhCtaTitle: 'Jeśli Ty lub ktoś, kogo znasz, potrzebuje wsparcia mieszkaniowego',
-          hhhCtaBody: 'Zadzwoń, aby porozmawiać z naszym zespołem HHH o mieszkaniach, zarządzaniu sprawami i opcjach opieki wytchnieniowej.',
-          hhhContactTitle: 'Skontaktuj się z zespołem HHH',
-          hhhContactPrimary: 'Główna linia HHH',
-          hhhContactRespite: 'Koordynacja opieki wytchnieniowej',
-          hhhContactSupport: 'Wsparcie programu',
-          hhhVisitUs: 'Odwiedź nas: 213 E. Cass Street, Joliet, IL 60432'
-        },
-        ar: {
-          navGetCare: 'الحصول على الرعاية',
-          navPrograms: 'البرامج',
-          navDonate: 'التبرع',
-          ctaCall: 'اتصل على ‎(815) 726-3377‎',
-          heroTitle: 'الإسكان والرعاية الصحية والأمل (HHH)',
-          heroDesc: 'يربط برنامج HHH بين السكن والرعاية الصحية للأشخاص الذين يعانون من التشرد أو عدم استقرار السكن.',
-          callHelp: 'اتصل بـ WGMC',
-          patientInfo: 'معلومات المريض',
-          hhhOverviewTitle: 'نظرة عامة',
-          hhhOverviewBody1: 'يربط برنامج HHH بين السكن والرعاية الصحية لأفراد مجتمعنا الذين يواجهون التشرد أو عدم استقرار السكن. يحصل المشاركون على خدمات تركز على الحصول على سكن ورعاية صحية مستقرين، بما في ذلك تلبية الاحتياجات الأساسية، إحالات المأوى، إدارة الحالات، تنسيق الرعاية، المساعدة في الإيجار على أساس المستأجر، والرعاية اللاحقة الطبية.',
-          hhhOverviewBody2: 'يلتقي فريقنا بالناس حيثما كانوا، ويُنسق دعم السكن والرعاية الصحية، ويسير مع المشاركين نحو الاستقرار.',
-          hhhStreetTitle: 'التواصل الميداني',
-          hhhStreetBody: 'التواصل مع الأفراد في المجتمع لتلبية الاحتياجات العاجلة، وتقديم المستلزمات الأساسية، وربط الناس بالرعاية الصحية ودعم السكن وإدارة الحالات.',
-          hhhRentalTitle: 'مساعدة إيجار قائمة على المستأجر',
-          hhhRentalBody: 'مساعدة المشاركين في تأمين السكن والحفاظ عليه من خلال المساعدة في الإيجار، وتنسيق الرعاية، والدعم المستمر للبقاء في سكن مستقر.',
-          hhhRespiteTitle: 'الرعاية المؤقتة الطبية',
-          hhhRespiteBody: 'إقامات قصيرة شبيهة بالمنزل مع رعاية منسقة للأشخاص الذين يحتاجون إلى مكان آمن للتعافي أثناء الاتصال بموارد السكن والرعاية الصحية.',
-          hhhRespiteLearnMore: 'اعرف المزيد',
-          hhhCtaTitle: 'إذا كنت أنت أو أي شخص تعرفه يحتاج إلى دعم سكني',
-          hhhCtaBody: 'اتصل للتحدث مع فريق HHH حول خيارات السكن وإدارة الحالات والرعاية المؤقتة الطبية.',
-          hhhContactTitle: 'اتصل بفريق HHH',
-          hhhContactPrimary: 'الخط الرئيسي لـ HHH',
-          hhhContactRespite: 'تنسيق الرعاية المؤقتة الطبية',
-          hhhContactSupport: 'دعم البرنامج',
-          hhhVisitUs: 'زرنا: 213 E. Cass Street, Joliet, IL 60432'
-        }
-      };
-      initPage(dict);
-      document.getElementById('year').textContent = new Date().getFullYear();
-    })();
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => observer.observe(el));
+
+    initPage();
   </script>
-  <script src="chatbot.js"></script>
 </html>
