@@ -96,7 +96,9 @@
     </script>
 
     <!-- App -->
-    <script type="text/babel">
+    <!-- App source (compiled manually below with the classic JSX runtime so Babel
+         does not inject an ESM `import` that breaks as a non-module script) -->
+    <script type="text/babel-src" id="app-source">
       const { useEffect, useMemo, useRef, useState } = React;
 
       // Simple reveal-on-scroll hook
@@ -1437,6 +1439,17 @@
       }
 
       ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+    <!-- Compile the JSX above with the classic runtime (React.createElement),
+         not the automatic runtime, which would emit `import ... from "react/jsx-runtime"`. -->
+    <script>
+      (function () {
+        var source = document.getElementById('app-source').textContent;
+        var compiled = Babel.transform(source, {
+          presets: [['react', { runtime: 'classic' }]]
+        }).code;
+        (0, eval)(compiled);
+      })();
     </script>
     <script src="chatbot.js"></script>
   </body>
