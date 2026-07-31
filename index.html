@@ -512,8 +512,11 @@
       const donationLinks = [
         { key: 'general', title: 'General Donation', href: 'https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ' },
         { key: 'sponsor', title: 'Sponsor a Patient', href: 'sponsor-a-patient.html', internal: true },
-        { key: 'brick', title: 'Brick by Brick', href: 'https://willgrundymedicalclinic.org/brick-by-brick/' }
+        // Brick by Brick is temporarily disabled. To restore, remove `disabled: true`.
+        { key: 'brick', title: 'Brick by Brick', href: 'https://willgrundymedicalclinic.org/brick-by-brick/', disabled: true }
       ];
+
+      const activeDonationLinks = donationLinks.filter((link) => !link.disabled);
 
       // Internal pages carry the visitor's language and stay in the same tab;
       // PayPal and Brick by Brick are off-site, so they open in a new one.
@@ -615,7 +618,7 @@
           { label: t.partnerReferrals, href: `partner-referrals.html?lang=${lang}` },
           { label: 'Social Media', href: `social-media.html?lang=${lang}` }
         ];
-        const donationMenuItems = donationLinks.map((d) => ({ ...d, label: d.key === 'general' ? t.generalDonation : d.key === 'sponsor' ? t.sponsorPatient : t.brickByBrick }));
+        const donationMenuItems = activeDonationLinks.map((d) => ({ ...d, label: d.key === 'general' ? t.generalDonation : d.key === 'sponsor' ? t.sponsorPatient : t.brickByBrick }));
         const openProg = (focusFirst = false) => {
           closeAllMenus();
           setProgOpen(true);
@@ -1215,7 +1218,7 @@
       }
 
       function SupportWGMC({ t, lang }) {
-        const links = donationLinks.map((link) => ({
+        const links = activeDonationLinks.map((link) => ({
           ...link,
           title: link.key === 'general' ? t.generalDonation : link.key === 'sponsor' ? t.sponsorPatient : t.brickByBrick
         }));
@@ -1395,7 +1398,7 @@
                       </button>
                       <div className={`absolute right-0 top-full mt-3 z-10 ${donateOpen ? '' : 'pointer-events-none'}`} style={{ pointerEvents: donateOpen ? 'auto' : 'none' }}>
                         <div className={`menu-pop w-56 rounded-brand bg-white shadow-card border border-slate-200 p-2 ${donateOpen ? 'open' : ''}`}>
-                          {donationLinks.map((link) => (
+                          {activeDonationLinks.map((link) => (
                             <a
                               key={link.key}
                               className="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary"
