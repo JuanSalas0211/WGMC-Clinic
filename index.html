@@ -511,9 +511,14 @@
 
       const donationLinks = [
         { key: 'general', title: 'General Donation', href: 'https://www.paypal.com/donate/?hosted_button_id=QB3XVPDN3EBDJ' },
-        { key: 'sponsor', title: 'Sponsor a Patient', href: 'https://www.paypal.com/ncp/payment/U2RHP4GV8MDUW' },
+        { key: 'sponsor', title: 'Sponsor a Patient', href: 'sponsor-a-patient.html', internal: true },
         { key: 'brick', title: 'Brick by Brick', href: 'https://willgrundymedicalclinic.org/brick-by-brick/' }
       ];
+
+      // Internal pages carry the visitor's language and stay in the same tab;
+      // PayPal and Brick by Brick are off-site, so they open in a new one.
+      const donateHref = (link, lang) => (link.internal ? `${link.href}?lang=${lang}` : link.href);
+      const donateTargetProps = (link) => (link.internal ? {} : { target: '_blank', rel: 'noreferrer' });
 
       function useLang() {
         const params = new URLSearchParams(location.search);
@@ -748,9 +753,8 @@
                         <a
                           key={item.key}
                           className="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary"
-                          href={item.href}
-                          target="_blank"
-                          rel="noreferrer"
+                          href={donateHref(item, lang)}
+                          {...donateTargetProps(item)}
                           onClick={() => window.analytics.track('donate_click', { placement: 'header', kind: item.key })}
                         >
                           {item.label}
@@ -858,9 +862,8 @@
                           key={item.key}
                           onClick={() => { setOpen(false); window.analytics.track('donate_click', { placement: 'mobile_menu', kind: item.key }); }}
                           className="py-1"
-                          href={item.href}
-                          target="_blank"
-                          rel="noreferrer"
+                          href={donateHref(item, lang)}
+                          {...donateTargetProps(item)}
                         >
                           {item.label}
                         </a>
@@ -1249,8 +1252,8 @@
                         }[lang] || 'Honor someone with a commemorative brick.')}
                     </p>
                     <a
-                      href={l.href}
-                      target="_blank" rel="noreferrer"
+                      href={donateHref(l, lang)}
+                      {...donateTargetProps(l)}
                       onClick={() => window.analytics.track('donate_click', { placement: 'support_section', kind: l.key })}
                       className="mt-4 btn btn-primary"
                     >
@@ -1396,9 +1399,8 @@
                             <a
                               key={link.key}
                               className="block px-3 py-2.5 rounded-md hover:bg-muted focus-visible:outline-none focus-visible:ring-2 ring-brand-secondary"
-                              href={link.href}
-                              target="_blank"
-                              rel="noreferrer"
+                              href={donateHref(link, lang)}
+                              {...donateTargetProps(link)}
                               onClick={() => window.analytics && window.analytics.track('donate_click', { placement:'footer', kind: link.key })}
                             >
                               {link.key === 'general' ? t.generalDonation : link.key === 'sponsor' ? t.sponsorPatient : t.brickByBrick}
